@@ -1,1 +1,1 @@
-web: gunicorn expenseswebsite.wsgi
+web: gunicorn flaskapp.app --bind 0.0.0.0:${PORT}
