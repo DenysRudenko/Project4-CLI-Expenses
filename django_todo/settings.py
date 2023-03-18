@@ -3,7 +3,6 @@ import os
 import django_heroku
 from pathlib import Path
 import dj_database_url
-import env
 
 load_dotenv()
 
