@@ -1,8 +1,14 @@
 from dotenv import load_dotenv
 import os
 import django_heroku
+from pathlib import Path
+import dj_database_url
+import env as env
 
 load_dotenv()
+
+if os.path.isfile("env.py"):
+    import env
 """
 Django settings for django_todo project.
 
@@ -79,16 +85,19 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_USER_PASSWORD'),
-        'HOST': os.environ.get('DB_HOST'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.environ.get('DB_NAME'),
+#         'USER': os.environ.get('DB_USER'),
+#         'PASSWORD': os.environ.get('DB_USER_PASSWORD'),
+#         'HOST': os.environ.get('DB_HOST'),
+#     }
+# }
 
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get('DATABASE_url'))
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
