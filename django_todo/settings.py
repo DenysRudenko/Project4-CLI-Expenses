@@ -1,5 +1,6 @@
 from dotenv import load_dotenv
 import os
+import django_heroku
 
 load_dotenv()
 """
@@ -126,6 +127,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'django_todo/static')]
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
+
+django_heroku.settings(locals())
+
 
 
 # Default primary key field type
