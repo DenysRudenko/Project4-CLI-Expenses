@@ -10,7 +10,7 @@ class UsernameValidationView(View):
         username=data['username']
         if not str(username).isalnum():
             return JsonResponse({'username_error':' username should only contain alph characters'})
-        return JsonResponse({'username_valid', True})
+        return JsonResponse({'username_valid': True})
     
 class RegistrationView(View):
     def get(self, request):
