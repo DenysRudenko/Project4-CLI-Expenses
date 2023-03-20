@@ -9,6 +9,8 @@ from django.core.mail import EmailMessage
 
 # Create your views here.
 
+
+
 class EmailValidationView(View):
     def post(self, request):
         data = json.loads(request.body)
@@ -16,7 +18,7 @@ class EmailValidationView(View):
         if not validate_email(email):
             return JsonResponse({'email_error': 'Email is invalid'}, status=400)
         if User.objects.filter(email=email).exists():
-            return JsonResponse({'email_error': 'sorry email is in use,choose another one '}, status=409)
+            return JsonResponse({'email_error': 'sorry email in use,choose another one '}, status=409)
         return JsonResponse({'email_valid': True})
 
 
@@ -58,21 +60,22 @@ class RegistrationView(View):
                 user.set_password(password)
                 user.is_active = False
                 user.save()
-               
+            
+                email_subject = 'Activate your account'
+                email_body = 'Test body'    
                 email = EmailMessage(
-                    'Hello',
-                    'Body goes here',
-                    'from@example.com',
-                    ['to1@example.com', 'to2@example.com'],
-                    ['bcc@example.com'],
-                    reply_to=['another@example.com'],
-                    headers={'Message-ID': 'foo'},
-                    )
+                    email_subject,
+                    email_body,
+                    'noreply@semycolon.com',
+                    [email],
+                
+                )
                
+                email.send(fail_silently=False)
                 messages.success(request, 'Account successfully created')
                 return render(request, 'authentication/register.html')
+        
                 
         return render(request, 'authentication/register.html')
-        
         
         
