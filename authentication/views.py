@@ -3,15 +3,22 @@ from django.views import View
 import json
 from django.http import JsonResponse
 from django.contrib.auth.models import User
+import json
+from django.http import JsonResponse
+from django.contrib.auth.models import User
 from validate_email import validate_email
 from django.contrib import messages
 from django.core.mail import EmailMessage
-from django.contrib import auth
-from django.urls import reverse
-from django.utils.encoding import force_bytes, force_str, DjangoUnicodeDecodeError
-from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.contrib.sites.shortcuts import get_current_site
+from django.utils.encoding import force_bytes, force_str, DjangoUnicodeDecodeError
+from django.core.mail import send_mail
+from django.contrib.sites.shortcuts import get_current_site
+from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
+from django.template.loader import render_to_string
+from django.urls import reverse
+from django.contrib import auth
 from .utils import token_generator
+
 # Create your views here.
 
 
@@ -42,9 +49,7 @@ class RegistrationView(View):
         return render(request, 'authentication/register.html')
 
     def post(self, request):
-        # Get user`s data
-        # Validation
-        # Creating a user acc
+       
         
         username = request.POST['username']
         email = request.POST['email']
@@ -98,3 +103,8 @@ class RegistrationView(View):
 class VerificationView(View):
     def get(self, request, uidb64, token):
         return redirect('login')
+    
+    
+class LoginView(View):
+    def get(self, request):
+         return render(request, 'authentication/login.html')
