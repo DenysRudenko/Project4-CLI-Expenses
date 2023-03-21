@@ -5,8 +5,6 @@ from pathlib import Path
 import dj_database_url
 from django.contrib import messages
 
-import myEnvVal
-
 load_dotenv()
 
 if os.path.isfile("env.py"):
