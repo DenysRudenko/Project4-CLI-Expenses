@@ -28,7 +28,7 @@ def search_expenses(request):
 def index(request):
     categories=Category.objects.all()
     expenses=Expense.objects.filter(owner=request.user)
-    paginator = Paginator(expenses, 2)
+    paginator = Paginator(expenses, 5)
     page_number=request.GET.get('page')
     page_obj=Paginator.get_page(paginator, page_number)
     currency=UserPreference.objects.get(user=request.user).currency
@@ -69,7 +69,8 @@ def add_expense(request):
         messages.success(request, 'Expense saved successfully')
 
         return redirect('expenses')
-    
+   
+@login_required(login_url='/authentication/login') 
 def expense_edit(request, id):
     expense = Expense.objects.get(pk=id)
     categories = Category.objects.all()
