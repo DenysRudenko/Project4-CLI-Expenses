@@ -1,0 +1,41 @@
+#header {
+   background: linear-gradient(90deg, #f4d6db, #BFACE2, #ECF2FF);
+    border-bottom: 1px solid #3795BD;
+}
+
+#branding h1 {
+    font-weight: 700;
+
+}
+
+.module h2, .module caption, .inline-group h2 {
+    background: #3795BD;
+    border-bottom: 1px solid #3795BD;
+}
+
+div.breadcrumbs {
+    background: #3795BD;
+}
+
+
+.object-tools a:link, .object-tools a:visited {
+    background: #2F58CD;
+}
+
+#toolbar {
+    background: #3795BD;
+    color: var(--body-quiet-color);
+}
+
+.button.default, input[type=submit].default, .submit-row input.default {
+    background: #3795BD;
+}
+
+#user-tools, #logout-form button {
+    font-size: 15px;
+    color: #3795BD;
+}
+
+body {
+    background: linear-gradient(90deg, #ECF2FF, #BFACE2, #f4d6db);
+}

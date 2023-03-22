@@ -2,7 +2,16 @@
 
 {% block branding %}
 
-<h1 class="" id="head"></h1>
+<h1 class="" id="head">
+    <img src="{% static  'images/logo.png'%}" style="width: 90px; height:75px;" alt="admin picture">
+    CLI Expenses
+</h1>
 
+
+{% endblock %}
+
+{% block extrastyle %}
+
+<link rel="stylesheet" href="{% static 'css/adminstyle.css' %}">
 
 {% endblock %}
