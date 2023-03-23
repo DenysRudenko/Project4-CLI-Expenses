@@ -209,10 +209,24 @@ class RequestPasswordResetEmail(View):
 class CompletePasswordReset(View):
     def get(self, request, uidb64, token):
         
+        
+        
         context= {
             'uidb64': uidb64,
             'token': token,
         }
+        
+        
+        try:
+            user_id = force_str(urlsafe_base64_decode(uidb64))
+            user=User.objects.get(pk=user_id)     
+            
+            if not PasswordResetTokenGenerator().check_token(user, token):
+                messages.info(request, 'Password link is invalid! Please request a new one!')
+                return render(request, 'authentication/reset-password.html')
+        except Exception as identifier:
+            
+            pass
         
         return render(request, 'authentication/set-new-password.html', context)
     
@@ -237,7 +251,6 @@ class CompletePasswordReset(View):
         
         try:
             user_id = force_str(urlsafe_base64_decode(uidb64))
-        
             user=User.objects.get(pk=user_id)
             user.set_password(password)
             user.save()
