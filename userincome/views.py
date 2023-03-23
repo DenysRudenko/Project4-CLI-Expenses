@@ -32,7 +32,7 @@ def index(request):
     if UserPreference.objects.filter(user = request.user).exists():
             currency = UserPreference.objects.get(user = request.user).currency
     else:
-        currency = 'INR - Indian Rupee'
+        currency = 'EUR - Euro'
     
    
     context = {
