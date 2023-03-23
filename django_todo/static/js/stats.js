@@ -1,10 +1,11 @@
+const renderChart = (data, labels) => {
 var ctx = document.getElementById('myChart').getContext("2d");
 var myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        labels: labels,
         datasets: [{
-            label: '# of Votes',
+            label: 'Last 6 months expenses',
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -29,6 +30,24 @@ var myChart = new Chart(ctx, {
         title: {
             display: true,
             text: 'Expenses per category',
-       }
+         },
         },
     });
+}
+
+const getChartData = () => {
+    console.log("Test?")
+    fetch('/expense_category_summary')
+        .then(res => res.json())
+        .then(results => {
+            const category_data = results.expense_category_data;
+            const [labels, data] = [
+                Object.keys(category_data),
+                Object.values(category_data)
+            ];
+
+        renderChart(data, labels);
+        });
+};
+
+document.onload = getChartData();
