@@ -173,11 +173,25 @@ a.page-link {
   color: #009879;
 }
 .chart {
-  width: 800px;
-  height: 600px;
+  width: 70%;
+  height: 70%;
   margin: 0 auto;
 }
 
 .chart #myChart {
   border: 1px solid grey;
+}
+
+a.nav-link .home {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+span.home {
+  text-decoration: underline;
+  text-transform: uppercase;
+  
+}
+a.nav-link .home:hover {
+  color: #9b9b9b;
 }
