@@ -19,9 +19,13 @@ from django.urls import reverse
 from django.contrib import auth
 from django.contrib.auth.tokens import PasswordResetTokenGenerator
 from .utils import account_activation_token
+import threading
 
 # Create your views here.
 
+# class EmailThread(threading.Thread):
+    
+#     def __init__(self, )
 
 
 class EmailValidationView(View):
@@ -64,7 +68,7 @@ class RegistrationView(View):
                     messages.error(request, 'Password too short')
                     return render(request, 'authentication/register.html', context)
 
-                user = User.objects.create_user(username=username, email=email)
+                user = User.objects.create_user(username=username, email=email,password=password)
                 user.set_password(password)
                 user.is_active = False
                 user.save()
@@ -104,7 +108,7 @@ class VerificationView(View):
             id = force_str(urlsafe_base64_decode(uidb64))
             user = User.objects.get(pk=id)
             
-            if not token_generator.check_token(user, token):
+            if not account_activation_token.check_token(user, token):
                 return redirect('login' + '?message='+'User already activated')
                 
             
@@ -125,14 +129,14 @@ class VerificationView(View):
     
 class LoginView(View):
     def get(self, request):
-         return render(request, 'authentication/login.html')
+        return render(request, 'authentication/login.html')
      
     def post(self, request):
         username = request.POST['username']
         password = request.POST['password']
         
         if username and password:
-            user=auth.authenticate(username=username, password= password)
+            user = auth.authenticate(username=username, password= password)
             
             if user:
                 if user.is_active:
