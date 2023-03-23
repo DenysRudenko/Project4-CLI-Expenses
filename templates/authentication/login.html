@@ -36,11 +36,20 @@
               class="form-control form-control-sm"
               id="passwordField"
             />
+            <small class="float-right py-3 showPasswordToggle">SHOW</small>
           </div>
           <input type="submit" value="Login" class="btn btn-block btn-primary submit-btn" />
         </form>
 
+         <div class="container">
+          <span class="text-lead lead">Dont have an account? <a href="{% url 'register' %}">Register</a></span> 
+          <br>
+          <span class="text-lead lead">Forgot password? <a href="{% url 'request-password' %}">Reset</a></span> 
+        </div>
+
       </div>
+
+   
 
       </div>
     </div>
