@@ -244,7 +244,7 @@ class CompletePasswordReset(View):
             
             messages.success(request, 'Password reset successfull, you can login!')
             return redirect('login')
-        except Exception as identifer:
+        except Exception as identifier:
             messages.info(request, 'Something went wrong!')
             return render(request, 'authentication/set-new-password.html', context)
        
