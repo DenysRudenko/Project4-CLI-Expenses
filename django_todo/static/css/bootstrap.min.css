@@ -2121,8 +2121,8 @@ pre code {
   color: #495057;
   background-color: #fff;
   background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0;
+  border: 1px solid #1e7b00;
+  border-radius: 8px;
   -webkit-transition: border-color 0.15s ease-in-out,
     -webkit-box-shadow 0.15s ease-in-out;
   transition: border-color 0.15s ease-in-out,
@@ -2691,9 +2691,10 @@ fieldset:disabled a.btn {
   box-shadow: 0 0 0 0.2rem rgba(71, 147, 231, 0.5);
 }
 .btn-secondary {
-  color: #fff;
-  background-color: #373a3c;
-  border-color: #373a3c;
+  color: #009879;
+  background-color: rgba(0, 0, 0, 0);
+  
+  border-color: #009879;
 }
 .btn-secondary:hover {
   color: #fff;
@@ -3237,7 +3238,7 @@ fieldset:disabled a.btn {
   padding: 0.25rem 0.5rem;
   font-size: 0.8203125rem;
   line-height: 1.5;
-  border-radius: 0;
+  border-radius: 8px;
 }
 .btn-block {
   display: block;
@@ -6451,7 +6452,7 @@ button.bg-light:focus {
   background-color: #dae0e5 !important;
 }
 .bg-dark {
-  background-color: #373a3c !important;
+  background-color: #000000;
 }
 a.bg-dark:hover,
 a.bg-dark:focus,
