@@ -23,9 +23,14 @@ import threading
 
 # Create your views here.
 
-# class EmailThread(threading.Thread):
+class EmailThread(threading.Thread):
     
-#     def __init__(self, )
+    def __init__(self, email):
+        self.email = email
+        threading.Thread.__init__(self)
+        
+    def run(self):
+        self.email.send(fail_silently=False)
 
 
 class EmailValidationView(View):
@@ -35,7 +40,7 @@ class EmailValidationView(View):
         if not validate_email(email):
             return JsonResponse({'email_error': 'Email is invalid'}, status=400)
         if User.objects.filter(email=email).exists():
-            return JsonResponse({'email_error': 'sorry email in use,choose another one '}, status=409)
+            return JsonResponse({'email_error': 'sorry email in use,choose another one! '}, status=409)
         return JsonResponse({'email_valid': True})
 
 
@@ -44,9 +49,9 @@ class UsernameValidationView(View):
         data = json.loads(request.body)
         username = data['username']
         if not str(username).isalnum():
-            return JsonResponse({'username_error': 'username should only contain alphanumeric characters'}, status=400)
+            return JsonResponse({'username_error': 'username should only contain alphanumeric characters!'}, status=400)
         if User.objects.filter(username=username).exists():
-            return JsonResponse({'username_error': 'sorry username in use,choose another one '}, status=409)
+            return JsonResponse({'username_error': 'sorry username in use, choose another one! '}, status=409)
         return JsonResponse({'username_valid': True})
     
 class RegistrationView(View):
@@ -65,7 +70,7 @@ class RegistrationView(View):
         if not User.objects.filter(username=username).exists():
             if not User.objects.filter(email=email).exists():
                 if len(password) < 6:
-                    messages.error(request, 'Password too short')
+                    messages.error(request, 'Password too short!')
                     return render(request, 'authentication/register.html', context)
 
                 user = User.objects.create_user(username=username, email=email,password=password)
@@ -83,18 +88,18 @@ class RegistrationView(View):
                 link = reverse('activate', kwargs={
                                'uidb64': email_body['uid'], 'token': email_body['token']})
 
-                email_subject = 'Activate your account'
+                email_subject = 'Activate your account.'
 
                 activate_url = 'http://'+current_site.domain+link
 
                 email = EmailMessage(
                     email_subject,
                     'Hi '+user.username + ', Please the link below to activate your account \n'+activate_url,
-                    'noreply@semycolon.com',
+                    'noreply@cliexpenses.com',
                     [email],
                 )
-                email.send(fail_silently=False)
-                messages.success(request, 'Account successfully created')
+                EmailThread(email).start()
+                messages.success(request, 'Account successfully created.')
                 return render(request, 'authentication/register.html')
 
         return render(request, 'authentication/register.html')
@@ -109,7 +114,7 @@ class VerificationView(View):
             user = User.objects.get(pk=id)
             
             if not account_activation_token.check_token(user, token):
-                return redirect('login' + '?message='+'User already activated')
+                return redirect('login' + '?message='+'User already activated.')
                 
             
             if user.is_active:
@@ -117,7 +122,7 @@ class VerificationView(View):
             user.is_active = True
             user.save()
             
-            messages.success(request, 'Account activated successfully')
+            messages.success(request, 'Account activated successfully.')
             return redirect('login')
             
         except Exception as ex:
@@ -141,14 +146,14 @@ class LoginView(View):
             if user:
                 if user.is_active:
                     auth.login(request, user)
-                    messages.success(request, 'Welcome, ' + 
-                                     user.username+ ' You are now logged in')
+                    messages.success(request, 'Welcome ' + 
+                                     user.username+ '. You are now logged in.')
                     return redirect('expenses')
             
-                messages.error(request, 'Account is not active, please check your email')
+                messages.error(request, 'Account is not active, please check your email.')
                 return render(request, 'authentication/login.html')
 
-            messages.error(request, 'Invalid credentials, try again')
+            messages.error(request, 'Invalid credentials, try again.')
             return render(request, 'authentication/login.html')
         
         messages.error(request, 'Please fill all fields')
@@ -158,7 +163,7 @@ class LoginView(View):
 class LogoutView(View):
     def post(self, request):
         auth.logout(request)
-        messages.success(request, 'You have beed logged out')
+        messages.success(request, 'You have beed logged out.')
         return redirect('login')
     
 class RequestPasswordResetEmail(View):
@@ -174,7 +179,7 @@ class RequestPasswordResetEmail(View):
         }
         
         if not validate_email(email):      
-            messages.error(request, 'Please supply a valid email')
+            messages.error(request, 'Please supply a valid email.')
             return render(request, 'authentication/reset-password.html', context)
             
         current_site = get_current_site(request)
@@ -191,7 +196,7 @@ class RequestPasswordResetEmail(View):
             link = reverse('reset-user-password', kwargs={
                             'uidb64': email_contents['uid'], 'token': email_contents['token']})
 
-            email_subject = 'Password reset Instructions'
+            email_subject = 'Password Reset Instructions'
 
             reset_url = 'http://'+current_site.domain+link
 
@@ -201,9 +206,9 @@ class RequestPasswordResetEmail(View):
                 'noreply@semycolon.com',
                 [email],
             )
-            email.send(fail_silently=False)
+            EmailThread(email).start()
         
-        messages.success(request, 'We have sent you an email to reset your password')
+        messages.success(request, 'We have sent you an email to reset your password.')
         
             
             
@@ -246,7 +251,7 @@ class CompletePasswordReset(View):
         
         
         if password != password2:
-            messages.error(request, 'Password do not match')
+            messages.error(request, 'Password do not match!')
             return render(request, 'authentication/set-new-password.html', context)
         
         if len(password) < 6:
