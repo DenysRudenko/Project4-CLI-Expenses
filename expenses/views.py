@@ -14,29 +14,28 @@ from django.template.loader import render_to_string
 
 
 
-# function for the searching 
+
 def search_expenses(request):
     if request.method == 'POST':
-       
         search_str = json.loads(request.body).get('searchText')
-        
-        expenses=Expense.objects.filter(
+        expenses = Expense.objects.filter(
             amount__istartswith=search_str, owner= request.user) | Expense.objects.filter(
             date__istartswith=search_str, owner= request.user) | Expense.objects.filter(
             description__icontains=search_str, owner= request.user) | Expense.objects.filter(
             category__icontains=search_str, owner= request.user)
             
-        data=expenses.values()
+        data = expenses.values()
         return JsonResponse(list(data), safe = False)
   
   
+
 @login_required(login_url='/authentication/login')
 def index(request):
-    categories=Category.objects.all()
-    expenses=Expense.objects.filter(owner=request.user)
+    categories = Category.objects.all()
+    expenses = Expense.objects.filter(owner=request.user)
     paginator = Paginator(expenses, 5)
-    page_number=request.GET.get('page')
-    page_obj=Paginator.get_page(paginator, page_number)
+    page_number = request.GET.get('page')
+    page_obj = Paginator.get_page(paginator, page_number)
 
     if UserPreference.objects.filter(user = request.user).exists():
         currency = UserPreference.objects.get(user = request.user).currency
@@ -80,7 +79,19 @@ def add_expense(request):
         messages.success(request, 'Expense saved successfully')
 
         return redirect('expenses')
+ 
+ 
    
+# Retrieve all categories from the database.
+# Create a dictionary containing the categories and the form values.
+# If the request method is GET, render the add_expense.html template with the context.
+# If the request method is POST:
+# Get the amount, description, date, and category from the POST data.
+# Validate the amount and description.
+# Create a new Expense object with the owner, amount, date, category, and description.
+# Save the Expense object to the database.
+# Display a success message.
+
 @login_required(login_url='/authentication/login') 
 def expense_edit(request, id):
     expense = Expense.objects.get(pk=id)
@@ -117,11 +128,14 @@ def expense_edit(request, id):
 
         return redirect('expenses')
     
+
+#  Allows you do delete expense
 def delete_expense(request, id):
     expense = Expense.objects.get(pk=id)
     expense.delete()
     messages.success(request, 'Expense removed')
     return redirect('expenses')
+
 
 def expense_category_summary(request):
     todays_date = datetime.date.today()
@@ -149,8 +163,10 @@ def expense_category_summary(request):
         
     return JsonResponse({'expense_category_data': finalrep}, safe=False)
 
+
 def exstats_view(request):
     return render(request, 'expenses/exstats.html')
+
 
 def export_csv(request):
     response = HttpResponse(content_type= 'text/csv')
@@ -166,6 +182,7 @@ def export_csv(request):
                          expense.category, expense.date])
         
     return response
+
 
 def export_excel(request):
     response = HttpResponse(content_type='application/ms_excel')
@@ -186,7 +203,7 @@ def export_excel(request):
     rows = Expense.objects.filter(owner=request.user).values_list('amount', 'description', 'category', 'date')
     
     for row in rows:
-        row_num+=1
+        row_num += 1
         
         for col_num in range(len(row)):
             ws.write(row_num, col_num, str(row[col_num]), font_style)

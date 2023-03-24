@@ -23,8 +23,8 @@ import threading
 
 # Create your views here.
 
+# The purpose of this class is to send an email message in a separate thread from the main application thread.
 class EmailThread(threading.Thread):
-    
     def __init__(self, email):
         self.email = email
         threading.Thread.__init__(self)
@@ -33,6 +33,7 @@ class EmailThread(threading.Thread):
         self.email.send(fail_silently=False)
 
 
+# validate email addresses before allowing users to create new accounts
 class EmailValidationView(View):
     def post(self, request):
         data = json.loads(request.body)
@@ -44,6 +45,7 @@ class EmailValidationView(View):
         return JsonResponse({'email_valid': True})
 
 
+# validate usernames before allowing users to create new account
 class UsernameValidationView(View):
     def post(self, request):
         data = json.loads(request.body)
@@ -54,6 +56,9 @@ class UsernameValidationView(View):
             return JsonResponse({'username_error': 'sorry username in use, choose another one! '}, status=409)
         return JsonResponse({'username_valid': True})
     
+
+#  The view renders the registration form and returns it as an HTTP response, along with a success message indicating that the account has been created. 
+#  If any of the validations fail, the view re-renders the registration form and returns it with an appropriate error message.
 class RegistrationView(View):
     def get(self, request):
         return render(request, 'authentication/register.html')
@@ -89,12 +94,11 @@ class RegistrationView(View):
                                'uidb64': email_body['uid'], 'token': email_body['token']})
 
                 email_subject = 'Activate your account.'
-
                 activate_url = 'http://'+current_site.domain+link
 
                 email = EmailMessage(
                     email_subject,
-                    'Hi '+user.username + ', Please the link below to activate your account \n'+activate_url,
+                    'Hi '+user.username + ', Please the link below to activate your account \n'+ activate_url,
                     'noreply@cliexpenses.com',
                     [email],
                 )
@@ -104,8 +108,9 @@ class RegistrationView(View):
 
         return render(request, 'authentication/register.html')
 
-        
-        
+
+# If the token is not valid, the user is redirected to the login page with a message indicating that the user has already been activated.
+# If an error occurs during the process, the user is redirected to the login page without any action taken.
 class VerificationView(View):
     def get(self, request, uidb64, token):
         
@@ -115,8 +120,7 @@ class VerificationView(View):
             
             if not account_activation_token.check_token(user, token):
                 return redirect('login' + '?message='+'User already activated.')
-                
-            
+                            
             if user.is_active:
                 return redirect('login')
             user.is_active = True
@@ -127,11 +131,11 @@ class VerificationView(View):
             
         except Exception as ex:
             pass
-        
-        
+           
         return redirect('login')
     
-    
+# it displays a message asking the user to check their email for activation. 
+# If authentication fails, it displays an error message asking the user to try again. 
 class LoginView(View):
     def get(self, request):
         return render(request, 'authentication/login.html')
@@ -165,15 +169,16 @@ class LogoutView(View):
         auth.logout(request)
         messages.success(request, 'You have beed logged out.')
         return redirect('login')
-    
+
+
+# If the user object exists, the view creates a password reset link with the user's primary key and a token.
+# If the email is sent successfully, the view returns a success message to the user on the same page, instructing them to check their email for further instructions.
 class RequestPasswordResetEmail(View):
     def get(self, request):
         return render(request, 'authentication/reset-password.html')
     
     def post(self, request):
-        
         email=request.POST['email']
-        
         context={
             'values': request.POST
         }
@@ -183,7 +188,7 @@ class RequestPasswordResetEmail(View):
             return render(request, 'authentication/reset-password.html', context)
             
         current_site = get_current_site(request)
-        user=User.objects.filter(email=email)
+        user = User.objects.filter(email=email)
         
         if user.exists():
             email_contents = {
@@ -209,22 +214,15 @@ class RequestPasswordResetEmail(View):
             EmailThread(email).start()
         
         messages.success(request, 'We have sent you an email to reset your password.')
-        
-            
-            
         return render(request, 'authentication/reset-password.html')
     
 
 class CompletePasswordReset(View):
     def get(self, request, uidb64, token):
-        
-        
-        
         context= {
             'uidb64': uidb64,
             'token': token,
         }
-        
         
         try:
             user_id = force_str(urlsafe_base64_decode(uidb64))
@@ -239,8 +237,10 @@ class CompletePasswordReset(View):
         
         return render(request, 'authentication/set-new-password.html', context)
     
+    
+# This implementation checks if the passwords match and if they have at least six characters.
+# It then sets the new password and saves the user object
     def post(self, request, uidb64, token):
-        
         context = {
             'uidb64': uidb64,
             'token': token,
@@ -248,7 +248,6 @@ class CompletePasswordReset(View):
         
         password=request.POST['password']
         password2=request.POST['password2']
-        
         
         if password != password2:
             messages.error(request, 'Password do not match!')
@@ -270,5 +269,3 @@ class CompletePasswordReset(View):
             messages.info(request, 'Something went wrong!')
             return render(request, 'authentication/set-new-password.html', context)
        
-        
-    #    return render(request, 'authentication/set-new-password.html')

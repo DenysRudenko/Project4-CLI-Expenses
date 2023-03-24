@@ -15,6 +15,8 @@ from expenses.models import Category, Expense
 
 # Create your views here.
 
+# It first checks if the request method is POST, and then extracts 
+# the search string from the POST request body using the json.loads function.
 
 def search_income(request):
     if request.method == 'POST':
@@ -85,8 +87,15 @@ def add_income(request):
 
 @login_required(login_url='/authentication/login')
 def income_edit(request, id):
+    
+    # Retrieve the income record to be edited based on the id parameter
+    
     income = UserIncome.objects.get(pk=id)
+    
+    # Get all sources for the source dropdown list in the form
     sources = Source.objects.all()
+    
+    # Set the context dictionary to be used in rendering the template
     context = {
         'income': income,
         'values': income,
@@ -97,6 +106,7 @@ def income_edit(request, id):
     if request.method == 'POST':
         amount = request.POST['amount']
 
+     # If amount is not provided, display an error message and render the edit_income.html template
         if not amount:
             messages.error(request, 'Amount is required')
             return render(request, 'income/edit_income.html', context)
@@ -127,7 +137,6 @@ def delete_income(request, id):
 
 
 def expense_source_summary(request):
-    print("TEST!")
     todays_date = datetime.date.today()
     six_months_ago = todays_date-datetime.timedelta(days=30*6)
     incomes = UserIncome.objects.filter(owner=request.user,
