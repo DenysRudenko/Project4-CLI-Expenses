@@ -157,9 +157,12 @@ You could create how much you need, if you dont have space you can press arrow t
 
 ### Format of expenses and incomes on your pc
 
-![Color scheme image](django_todo/static/images/14.png)
+![Screenshot](django_todo/static/images/14.png)
 
 As you see, pehaos its not in a good format but, you could see your table clean as you need.
 
-
 ### Search bar
+
+I deployedspecial are where you can find your incomes or expenses much more easier by targeting it by speacial value.
+
+![Color scheme image](django_todo/static/images/14.png)
