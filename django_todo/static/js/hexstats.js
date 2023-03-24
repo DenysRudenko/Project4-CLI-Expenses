@@ -1,7 +1,7 @@
 const renderChart = (data, labels) => {
 var ctx = document.getElementById('myChart').getContext("2d");
 var myChart = new Chart(ctx, {
-    type: 'bar',
+    type: 'doughnut',
     data: {
         labels: labels,
         datasets: [{
@@ -27,22 +27,18 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
-    scales: {
-        yAxes: [{
-            ticks: {
-                beginAtZero:true
-            }
-        }]
-        }
-    }
+        title: {
+            display: true,
+            text: 'Expenses per category',
+         },
+        },
     });
 }
 
 const getChartData = () => {
-    console.log("Test?")
-    fetch('/expense_source_summary')
-        .then(res => res.json())
-        .then(results => {
+    fetch('/expense_category_summary')
+        .then((res) => res.json())
+        .then((results) => {
             const category_data = results.expense_category_data;
             const [labels, data] = [
                 Object.keys(category_data),

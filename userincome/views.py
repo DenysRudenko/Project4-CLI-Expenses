@@ -127,6 +127,7 @@ def delete_income(request, id):
 
 
 def expense_source_summary(request):
+    print("TEST!")
     todays_date = datetime.date.today()
     six_months_ago = todays_date-datetime.timedelta(days=30*6)
     incomes = UserIncome.objects.filter(owner=request.user,

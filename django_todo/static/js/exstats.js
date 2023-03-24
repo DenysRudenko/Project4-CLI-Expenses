@@ -37,8 +37,8 @@ var myChart = new Chart(ctx, {
 
 const getChartData = () => {
     fetch('/expense_category_summary')
-        .then(res => res.json())
-        .then(results => {
+        .then((res) => res.json())
+        .then((results) => {
             const category_data = results.expense_category_data;
             const [labels, data] = [
                 Object.keys(category_data),
