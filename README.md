@@ -93,7 +93,7 @@ The first phase will include the features that have been identified in order to 
 
 ### Mockflow
 
-At the start I created a website template  for understanding what should be going on.
+At the start, I created a website template to understand what should be going on.
 
 ![Code Buddy website map](django_todo/static/images/readme/23.png)
 
@@ -131,13 +131,13 @@ After successfull registration, user will receive an confirmation email, to foll
 
 ![Color scheme image](django_todo/static/images/readme/3.png)
 
-In a good programming practice user should login to tour website onl after confirmation email accepted.It`s really import to pay attention to make login and registration securely.
+In good programming practice, users should only be able to log in to your website after accepting a confirmation email. It's really important to pay attention to making login and registration secure.
 
 ![Color scheme image](django_todo/static/images/readme/4.png)
 
 ### Main page
 
-After succesfull login user can interact with a website. He can create expenses, income , edit them, delete them, and count how much he spend by the group and categories with additional information. It`s really important to keep on track on counting you budget.
+After a successful login, the user can interact with the website. They can create expenses and income, edit them, delete them, and track their spending by group and category, along with additional information. It's really important to stay on track with counting your budget
 
 ![Color scheme image](django_todo/static/images/readme/5.png)
 
@@ -163,7 +163,7 @@ As you see, pehaos its not in a good format but, you could see your table clean 
 
 ### Search bar
 
-I deployedspecial are where you can find your incomes or expenses much more easier by targeting it by speacial value.
+"I have deployed a special area where you can find your incomes or expenses much more easily by targeting them with special values.
 
 ![Color scheme image](django_todo/static/images/readme/15.png)
 
@@ -191,7 +191,7 @@ Deployment: Model graphs can be used to deploy models to production systems, suc
 
 ### Create Expanses
 
-In this section you could create expanse or income and make a description about it.
+In this section you could create expanses or incomes and make a description about it.
 
 
 ![Color scheme image](django_todo/static/images/readme/12.png)
@@ -209,11 +209,13 @@ Mostly I used bootstrap, so in css valiadation I got a lot of errors and can do 
 
 ### Admin User
 
-I decided to style admin panel and some random colours from internet. Alse I asked my friends to login to my website to test it out and tell me the bugs or dislikes aobut this website.
+I decided to style admin panel and into some random colours from internet. Alse I asked my friends to login to my website to test it out and tell me the bugs or dislikes aobut this website.
 
 ![Color scheme image](django_todo/static/images/readme/21.png)
 
-### Search bar
+### Email
+
+I created a new email to allow bot to send messages from website.
 
 ![Color scheme image](django_todo/static/images/readme/10.png)
 
@@ -227,7 +229,9 @@ I decided to style admin panel and some random colours from internet. Alse I ask
 ![Color scheme image](django_todo/static/images/readme/16.png)
 
 
-### Search bar
+### Django databases
+
+I had a bug where i created a user and I had no chance to login anymore, I cheacked in internet information about how to check it, and i found that cool pic.
 
 ![Color scheme image](django_todo/static/images/readme/19.png)
 
