@@ -167,36 +167,50 @@ I deployedspecial are where you can find your incomes or expenses much more easi
 
 ![Color scheme image](django_todo/static/images/readme/15.png)
 
-### Search bar
+### Currency
+
+In additional section you could pick any currency you would like.
 
 ![Color scheme image](django_todo/static/images/readme/12.png)
 
-### Search bar
+### Model Graph
+
+A model graph, also known as a computational graph, is a way of representing a mathematical model or algorithm as a directed graph, where nodes represent mathematical operations and edges represent the flow of data between those operations. Model graphs are commonly used in machine learning to represent neural networks and other types of models.
+
+Model graphs can be helpful in a number of ways:
+
+Visualization: Model graphs provide a visual representation of the model or algorithm, which can help researchers and engineers better understand how the model works and identify areas for improvement.
+
+Debugging: When a model is not performing as expected, a model graph can help pinpoint where errors are occurring by tracing the flow of data through the graph.
+
+Optimization: By analyzing a model graph, researchers can identify parts of the model that are computationally expensive and optimize those parts to improve performance.
+
+Deployment: Model graphs can be used to deploy models to production systems, such as mobile devices or cloud servers, by converting the graph to a format that can be executed efficiently on those systems.
 
 ![Color scheme image](django_todo/static/images/readme/11.png)
 
 
-### Search bar
+### Create Expanses
+
+In this section you could create expanse or income and make a description about it.
 
 ![Color scheme image](django_todo/static/images/readme/7.png)
 
-### Search bar
 
-![Color scheme image](django_todo/static/images/readme/9.png)
-
-### Search bar
-
-![Color scheme image](django_todo/static/images/readme/14.png)
-
-### Search bar
+### Lighthouse
+As I was really really late with a submission my statistics isnt that good how it suppost to be.
 
 ![Color scheme image](django_todo/static/images/readme/13.png)
 
-### Search bar
+### CSS
+
+Mostly I used bootstrap, so in css valiadation I got a lot of errors and can do nothing with that. I suppose I have a small experience it it.
 
 ![Color scheme image](django_todo/static/images/readme/20.png)
 
-### Search bar
+### Admin User
+
+I decided to style admin panel and some random colours from internet. Alse I asked my friends to login to my website to test it out and tell me the bugs or dislikes aobut this website.
 
 ![Color scheme image](django_todo/static/images/readme/17.png)
 
