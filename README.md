@@ -167,55 +167,55 @@ I deployedspecial are where you can find your incomes or expenses much more easi
 
 ![Color scheme image](django_todo/static/images/readme/15.png)
 
-
+### Search bar
 
 ![Color scheme image](django_todo/static/images/readme/12.png)
 
-
+### Search bar
 
 ![Color scheme image](django_todo/static/images/readme/11.png)
 
 
-
+### Search bar
 
 ![Color scheme image](django_todo/static/images/readme/7.png)
 
-
+### Search bar
 
 ![Color scheme image](django_todo/static/images/readme/9.png)
 
-
+### Search bar
 
 ![Color scheme image](django_todo/static/images/readme/14.png)
 
-
+### Search bar
 
 ![Color scheme image](django_todo/static/images/readme/13.png)
 
-
+### Search bar
 
 ![Color scheme image](django_todo/static/images/readme/20.png)
 
-
+### Search bar
 
 ![Color scheme image](django_todo/static/images/readme/17.png)
 
-
+### Search bar
 
 ![Color scheme image](django_todo/static/images/readme/21.png)
 
-
+### Search bar
 
 ![Color scheme image](django_todo/static/images/readme/10.png)
 
-
+### Search bar
 
 ![Color scheme image](django_todo/static/images/readme/18.png)
 
-
+### Search bar
 
 ![Color scheme image](django_todo/static/images/readme/16.png)
 
-
+### Search bar
 
 ![Color scheme image](django_todo/static/images/readme/19.png)
