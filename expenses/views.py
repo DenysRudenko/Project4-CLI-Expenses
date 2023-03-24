@@ -149,8 +149,8 @@ def expense_category_summary(request):
         
     return JsonResponse({'expense_category_data': finalrep}, safe=False)
 
-def stats_view(request):
-    return render(request, 'expenses/stats.html')
+def exstats_view(request):
+    return render(request, 'expenses/exstats.html')
 
 def export_csv(request):
     response = HttpResponse(content_type= 'text/csv')

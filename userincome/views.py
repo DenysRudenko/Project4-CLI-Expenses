@@ -153,6 +153,9 @@ def expense_source_summary(request):
         
     return JsonResponse({'expense_category_data': finalrep}, safe=False)
 
+def hexstats_view(request):
+    return render(request, 'income/hexstats.html')
+
 
 def export_csv(request):
     response = HttpResponse(content_type= 'text/csv')
