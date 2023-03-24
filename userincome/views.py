@@ -12,6 +12,7 @@ import csv
 import xlwt
 from django.template.loader import render_to_string
 from expenses.models import Category, Expense
+
 # Create your views here.
 
 
@@ -122,6 +123,35 @@ def delete_income(request, id):
     income.delete()
     messages.success(request, 'record removed')
     return redirect('income')
+
+
+
+def expense_source_summary(request):
+    todays_date = datetime.date.today()
+    six_months_ago = todays_date-datetime.timedelta(days=30*6)
+    incomes = UserIncome.objects.filter(owner=request.user,
+                date__gte=six_months_ago, date__lte=todays_date)
+    
+    finalrep = {}
+    
+    def get_category(income):
+        return income.source    
+    category_list = list(set(map(get_category, incomes)))
+    
+    def get_income_category_amount(source):
+        amount = 0
+        filtered_by_category = incomes.filter(source=source)
+        
+        for item in filtered_by_category:
+            amount += item.amount
+        
+        return amount
+    
+    for x in incomes:
+        for y in category_list:
+            finalrep[y] = get_income_category_amount(y)
+        
+    return JsonResponse({'expense_category_data': finalrep}, safe=False)
 
 
 def export_csv(request):
