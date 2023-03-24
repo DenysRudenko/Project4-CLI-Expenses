@@ -1,108 +1,165 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# CLI Expenses
 
-Welcome Denys ,
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![CLI Expenses mockup images](django_todo/static/images/readme/5.png)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
+Managing expenses and incomes can be a daunting task, especially when it comes to keeping track of all the details and making sure everything is in order. However, it is an essential part of maintaining financial stability and achieving your financial goals.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Visit the deployed website [here](https://trulyexpenses.herokuapp.com/).
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
+## Table of Contents
 
-Another blue button should appear to click: _Open Browser_.
+1. [User Experience (UX)](#user-experience-ux)
+    1. [Strategy](#strategy)
+        1. [Project Goals](#project-goals)
+        2. [User Goals](#user-goals)
+        3. [Strategy Table](#strategy-table)
+    2. [Scope](#scope)
+        1. [User Stories](#user-stories)
+    3. [Structure](#structure)
+    4. [Skeleton](#skeleton)
+    5. [Surface](#surface)
+2. [Features](#features)
+    1. [General](#general)
+    2. [Home Page](#home-page)
+    3. [About Page](#about-page)
+    4. [Search Results Page](#search-results-page)
+    5. [Question Detail Page](#question-detail-page)
+    6. [Ask Question Page](#ask-question-page)
+    7. [Leave Reply Page](#leave-reply-page)
+    8. [Edit Question Page](#edit-question-page)
+    9. [Delete Question Page](#delete-question-page)
+    10. [Edit Reply Page](#edit-reply-page)
+    11. [Delete Reply Page](#delete-reply-page)
+    12. [Authentication Pages](#authentication-pages)
+3. [Technologies Used](#technologies-used)
+    1. [Languages Used](#languages-used)
+    2. [Libraries and Frameworks](#languages-and-frameworks)
+    3. [Packages / Dependecies Installed](#packages--dependecies-installed)
+    4. [Database Management](#database-management)
+    5. [Tools and Programs](#tools-and-programs)
+4. [Testing](#testing)
+    1. [Go to TESTING.md](https://github.com/josswe26/code-buddy/blob/main/TESTING.md#code-buddy-testing)
+5. [Deployment](#deployment)
+6. [Finished Product](#finished-product)
+7. [Credits](#credits)
+8. [Known Bugs](#known-bugs)
+9. [Acknowledgements](#acknowledgements)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
 
-A blue button should appear to click: _Make Public_,
+***
 
-Another blue button should appear to click: _Open Browser_.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## User Experience (UX)
 
-To log into the Heroku toolbelt CLI:
+### Strategy
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#### Project Goals
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+* The website contains simple colors for adminstative purposes.
 
-------
+* Responsive design to make the website accessible on different screen sizes.
 
-## Release History
+* Structure is easy to understand and navigates effortlessly.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+* Site users are able to register an account in order to interact with the content.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+* Site users are able to create expenses and incomes, delete them, edit them.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+#### User Goals
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+* As a Site Admin, I want to manage the site content.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+* As a Site User, I want to be able to interact with the content.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+* As a Site User, I want the information to be easy to find and read.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+* As a Site User, I can create new expenses and incomes.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+* As a Site User, I want to manage the content I created.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+* As a Site User, I want to be able to help make the content more relevant.
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+### Scope
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+The first phase will include the features that have been identified in order to build the minimum viable product.
 
-------
 
-## FAQ about the uptime script
+### Mockflow
 
-**Why have you added this script?**
+At the start I created a website template  for understanding what should be going on.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+![Code Buddy website map](django_todo/static/images/23.png)
 
-**How will this affect me?**
+* Header, navigation bar are consistent through all pages.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+* Links and forms provide clear feedback to the site user.
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+* The opportunity to add additional content to the website is provided for the site user once they register an account.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
 
-**So….?**
+### Skeleton
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+#### Lets Hang Around The Webiste
 
-**Can I opt out?**
+### Register
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+![Register image](django_todo/static/images/1.png)
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+Why is it important to have login area?
+Logging in to a website is important for several reasons:
 
-**Anything more?**
+Personalization: When you log in, the website can personalize the experience for you. It can remember your preferences, display content relevant to your interests, and provide a customized user interface.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+Security: Logging in provides an additional layer of security for both you and the website. By requiring a username and password, the website can ensure that only authorized users have access to sensitive information or functions.
 
----
+Access to restricted content or features: Some websites offer premium content or features that are only available to registered users. By logging in, you can gain access to these exclusive features.
 
-Happy coding!
+Tracking and analytics: When you log in, the website can track your activity and behavior on the site. This information can be used to improve the user experience, analyze user behavior, and make data-driven decisions.
+
+Overall, logging in to a website can enhance your experience, provide additional security, and unlock access to exclusive content or features.
+
+### Login
+
+After successfull registration, user will receive an confirmation email, to follow the instuctions.
+
+![Color scheme image](django_todo/static/images/3.png)
+
+In a good programming practice user should login to tour website onl after confirmation email accepted.It`s really import to pay attention to make login and registration securely.
+
+![Color scheme image](django_todo/static/images/4.png)
+
+### Main page
+
+After succesfull login user can interact with a website. He can create expenses, income , edit them, delete them, and count how much he spend by the group and categories with additional information. It`s really important to keep on track on counting you budget.
+
+![Color scheme image](django_todo/static/images/5.png)
+
+### Download your expenses
+
+On CLI Expenses you are able to download your own records, see in the picture below.
+
+![Color scheme image](django_todo/static/images/6.png)
+
+[Back to top ⇧](#code-buddy)
+
+### Expenses and Incomes
+
+![Color scheme image](django_todo/static/images/8.png)
+
+You could create how much you need, if you dont have space you can press arrow tag to link for you your old expenses.
+
+### Format of expenses and incomes on your pc
+
+![Color scheme image](django_todo/static/images/14.png)
+
+As you see, pehaos its not in a good format but, you could see your table clean as you need.
+
+
+### Search bar
