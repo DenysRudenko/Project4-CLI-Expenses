@@ -95,7 +95,7 @@ The first phase will include the features that have been identified in order to 
 
 At the start I created a website template  for understanding what should be going on.
 
-![Code Buddy website map](django_todo/static/images/23.png)
+![Code Buddy website map](django_todo/static/images/readme/23.png)
 
 * Header, navigation bar are consistent through all pages.
 
@@ -110,7 +110,7 @@ At the start I created a website template  for understanding what should be goin
 
 ### Register
 
-![Register image](django_todo/static/images/1.png)
+![Register image](django_todo/static/images/readme/1.png)
 
 Why is it important to have login area?
 Logging in to a website is important for several reasons:
