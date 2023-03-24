@@ -9,49 +9,6 @@ Managing expenses and incomes can be a daunting task, especially when it comes t
 Visit the deployed website [here](https://trulyexpenses.herokuapp.com/).
 
 
-## Table of Contents
-
-1. [User Experience (UX)](#user-experience-ux)
-    1. [Strategy](#strategy)
-        1. [Project Goals](#project-goals)
-        2. [User Goals](#user-goals)
-        3. [Strategy Table](#strategy-table)
-    2. [Scope](#scope)
-        1. [User Stories](#user-stories)
-    3. [Structure](#structure)
-    4. [Skeleton](#skeleton)
-    5. [Surface](#surface)
-2. [Features](#features)
-    1. [General](#general)
-    2. [Home Page](#home-page)
-    3. [About Page](#about-page)
-    4. [Search Results Page](#search-results-page)
-    5. [Question Detail Page](#question-detail-page)
-    6. [Ask Question Page](#ask-question-page)
-    7. [Leave Reply Page](#leave-reply-page)
-    8. [Edit Question Page](#edit-question-page)
-    9. [Delete Question Page](#delete-question-page)
-    10. [Edit Reply Page](#edit-reply-page)
-    11. [Delete Reply Page](#delete-reply-page)
-    12. [Authentication Pages](#authentication-pages)
-3. [Technologies Used](#technologies-used)
-    1. [Languages Used](#languages-used)
-    2. [Libraries and Frameworks](#languages-and-frameworks)
-    3. [Packages / Dependecies Installed](#packages--dependecies-installed)
-    4. [Database Management](#database-management)
-    5. [Tools and Programs](#tools-and-programs)
-4. [Testing](#testing)
-    1. [Go to TESTING.md](https://github.com/josswe26/code-buddy/blob/main/TESTING.md#code-buddy-testing)
-5. [Deployment](#deployment)
-6. [Finished Product](#finished-product)
-7. [Credits](#credits)
-8. [Known Bugs](#known-bugs)
-9. [Acknowledgements](#acknowledgements)
-
-
-***
-
-
 ## User Experience (UX)
 
 ### Strategy
@@ -82,8 +39,6 @@ Visit the deployed website [here](https://trulyexpenses.herokuapp.com/).
 * As a Site User, I want to manage the content I created.
 
 * As a Site User, I want to be able to help make the content more relevant.
-
-
 
 
 ### Scope
