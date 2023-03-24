@@ -10,6 +10,9 @@ from userpreferences.models import UserPreference
 import datetime
 import csv
 import xlwt
+from django.template.loader import render_to_string
+
+
 
 # function for the searching 
 def search_expenses(request):
@@ -152,10 +155,7 @@ def stats_view(request):
 def export_csv(request):
     response = HttpResponse(content_type= 'text/csv')
     
-    response['Content-Disposition'] = 'attachment; filename="Expenses{}.csv"'.format(str(datetime.datetime.now()))
-    
-    # response['Content-Disposition'] = 'attachment; filename=Expenses' + \ str(datetime.datetime.now()) + '.csv'
-    
+    response['Content-Disposition'] = 'attachment; filename="Expenses{}.csv"'.format(str(datetime.datetime.now())) 
     writer = csv.writer(response)
     writer.writerow(['Amount', 'Description', 'Category','Date'])
     
@@ -168,7 +168,7 @@ def export_csv(request):
     return response
 
 def export_excel(request):
-    response = HttpResponse(content_type='application/ms-excel')
+    response = HttpResponse(content_type='application/ms_excel')
     response['Content-Disposition'] = 'attachment; filename="Expenses{}.xls"'.format(str(datetime.datetime.now()))
     wb = xlwt.Workbook(encoding='utf-8')
     ws = wb.add_sheet('Expenses')
