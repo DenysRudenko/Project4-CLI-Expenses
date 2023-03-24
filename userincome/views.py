@@ -5,9 +5,13 @@ from userpreferences.models import UserPreference
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 import json
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
+from userpreferences.models import UserPreference
 import datetime
 import csv
+import xlwt
+from django.template.loader import render_to_string
+from expenses.models import Category, Expense
 # Create your views here.
 
 
@@ -118,3 +122,47 @@ def delete_income(request, id):
     income.delete()
     messages.success(request, 'record removed')
     return redirect('income')
+
+
+def export_csv(request):
+    response = HttpResponse(content_type= 'text/csv')
+    
+    response['Content-Disposition'] = 'attachment; filename="Incomes{}.csv"'.format(str(datetime.datetime.now()))
+  
+    writer = csv.writer(response)
+    writer.writerow(['Amount', 'Description', 'Source','Date'])
+    
+    incomes_Exp = UserIncome.objects.filter(owner=request.user)
+    
+    for income in incomes_Exp:
+        writer.writerow([income.amount, income.description,
+                         income.source, income.date]) 
+        
+    return response
+
+def export_excel(request):
+    response = HttpResponse(content_type='application/ms-excel')
+    response['Content-Disposition'] = 'attachment; filename="Incomes{}.xls"'.format(str(datetime.datetime.now()))
+    wb = xlwt.Workbook(encoding='utf-8')
+    ws = wb.add_sheet('Incomes')
+    row_num = 0
+    font_style = xlwt.XFStyle()
+    font_style.font.bold = True
+    
+    columns = ['Amount', 'Description', 'Source','Date']
+    
+    for col_num in range(len(columns)):
+        ws.write(row_num, col_num, columns[col_num], font_style)
+        
+    font_style = xlwt.XFStyle()
+    
+    rows = UserIncome.objects.filter(owner=request.user).values_list('amount', 'description', 'source', 'date')
+    
+    for row in rows:
+        row_num+=1
+        
+        for col_num in range(len(row)):
+            ws.write(row_num, col_num, str(row[col_num]), font_style)
+    wb.save(response)
+    
+    return response

@@ -36,7 +36,6 @@ var myChart = new Chart(ctx, {
 }
 
 const getChartData = () => {
-    console.log("Test?")
     fetch('/expense_category_summary')
         .then(res => res.json())
         .then(results => {
