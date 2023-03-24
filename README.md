@@ -171,8 +171,7 @@ I deployedspecial are where you can find your incomes or expenses much more easi
 
 In additional section you could pick any currency you would like.
 
-![Color scheme image](django_todo/static/images/readme/12.png)
-
+![Color scheme image](django_todo/static/images/readme/11.png)
 ### Model Graph
 
 A model graph, also known as a computational graph, is a way of representing a mathematical model or algorithm as a directed graph, where nodes represent mathematical operations and edges represent the flow of data between those operations. Model graphs are commonly used in machine learning to represent neural networks and other types of models.
@@ -187,15 +186,15 @@ Optimization: By analyzing a model graph, researchers can identify parts of the 
 
 Deployment: Model graphs can be used to deploy models to production systems, such as mobile devices or cloud servers, by converting the graph to a format that can be executed efficiently on those systems.
 
-![Color scheme image](django_todo/static/images/readme/11.png)
 
+![Color scheme image](django_todo/static/images/readme/7.png)
 
 ### Create Expanses
 
 In this section you could create expanse or income and make a description about it.
 
-![Color scheme image](django_todo/static/images/readme/7.png)
 
+![Color scheme image](django_todo/static/images/readme/12.png)
 
 ### Lighthouse
 As I was really really late with a submission my statistics isnt that good how it suppost to be.
