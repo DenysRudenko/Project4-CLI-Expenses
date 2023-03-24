@@ -200,27 +200,24 @@ In this section you could create expanse or income and make a description about 
 ### Lighthouse
 As I was really really late with a submission my statistics isnt that good how it suppost to be.
 
-![Color scheme image](django_todo/static/images/readme/13.png)
+![Color scheme image](django_todo/static/images/readme/20.png)
 
 ### CSS
 
 Mostly I used bootstrap, so in css valiadation I got a lot of errors and can do nothing with that. I suppose I have a small experience it it.
 
-![Color scheme image](django_todo/static/images/readme/20.png)
+![Color scheme image](django_todo/static/images/readme/17.png)
 
 ### Admin User
 
 I decided to style admin panel and some random colours from internet. Alse I asked my friends to login to my website to test it out and tell me the bugs or dislikes aobut this website.
-
-![Color scheme image](django_todo/static/images/readme/17.png)
-
-### Search bar
 
 ![Color scheme image](django_todo/static/images/readme/21.png)
 
 ### Search bar
 
 ![Color scheme image](django_todo/static/images/readme/10.png)
+
 
 ### Search bar
 
@@ -230,6 +227,11 @@ I decided to style admin panel and some random colours from internet. Alse I ask
 
 ![Color scheme image](django_todo/static/images/readme/16.png)
 
+
 ### Search bar
 
 ![Color scheme image](django_todo/static/images/readme/19.png)
+
+
+
+
