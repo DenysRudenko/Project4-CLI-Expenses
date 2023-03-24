@@ -40,7 +40,7 @@ var myChart = new Chart(ctx, {
 
 const getChartData = () => {
     console.log("Test?")
-    fetch('/expense_category_summary')
+    fetch('/expense_source_summary')
         .then(res => res.json())
         .then(results => {
             const category_data = results.expense_category_data;
