@@ -129,35 +129,35 @@ Overall, logging in to a website can enhance your experience, provide additional
 
 After successfull registration, user will receive an confirmation email, to follow the instuctions.
 
-![Color scheme image](django_todo/static/images/3.png)
+![Color scheme image](django_todo/static/images/readme/3.png)
 
 In a good programming practice user should login to tour website onl after confirmation email accepted.It`s really import to pay attention to make login and registration securely.
 
-![Color scheme image](django_todo/static/images/4.png)
+![Color scheme image](django_todo/static/images/readme/4.png)
 
 ### Main page
 
 After succesfull login user can interact with a website. He can create expenses, income , edit them, delete them, and count how much he spend by the group and categories with additional information. It`s really important to keep on track on counting you budget.
 
-![Color scheme image](django_todo/static/images/5.png)
+![Color scheme image](django_todo/static/images/readme/5.png)
 
 ### Download your expenses
 
 On CLI Expenses you are able to download your own records, see in the picture below.
 
-![Color scheme image](django_todo/static/images/6.png)
+![Color scheme image](django_todo/static/images/readme/6.png)
 
 [Back to top ⇧](#code-buddy)
 
 ### Expenses and Incomes
 
-![Color scheme image](django_todo/static/images/8.png)
+![Color scheme image](django_todo/static/images/readme/8.png)
 
 You could create how much you need, if you dont have space you can press arrow tag to link for you your old expenses.
 
 ### Format of expenses and incomes on your pc
 
-![Screenshot](django_todo/static/images/14.png)
+![Screenshot](django_todo/static/images/readme/14.png)
 
 As you see, pehaos its not in a good format but, you could see your table clean as you need.
 
@@ -165,4 +165,57 @@ As you see, pehaos its not in a good format but, you could see your table clean 
 
 I deployedspecial are where you can find your incomes or expenses much more easier by targeting it by speacial value.
 
-![Color scheme image](django_todo/static/images/14.png)
+![Color scheme image](django_todo/static/images/readme/15.png)
+
+
+
+![Color scheme image](django_todo/static/images/readme/12.png)
+
+
+
+![Color scheme image](django_todo/static/images/readme/11.png)
+
+
+
+
+![Color scheme image](django_todo/static/images/readme/7.png)
+
+
+
+![Color scheme image](django_todo/static/images/readme/9.png)
+
+
+
+![Color scheme image](django_todo/static/images/readme/14.png)
+
+
+
+![Color scheme image](django_todo/static/images/readme/13.png)
+
+
+
+![Color scheme image](django_todo/static/images/readme/20.png)
+
+
+
+![Color scheme image](django_todo/static/images/readme/17.png)
+
+
+
+![Color scheme image](django_todo/static/images/readme/21.png)
+
+
+
+![Color scheme image](django_todo/static/images/readme/10.png)
+
+
+
+![Color scheme image](django_todo/static/images/readme/18.png)
+
+
+
+![Color scheme image](django_todo/static/images/readme/16.png)
+
+
+
+![Color scheme image](django_todo/static/images/readme/19.png)
