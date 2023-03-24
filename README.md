@@ -220,12 +220,6 @@ I created a new email to allow bot to send messages from website.
 ![Color scheme image](django_todo/static/images/readme/10.png)
 
 
-### Search bar
-
-![Color scheme image](django_todo/static/images/readme/18.png)
-
-### Search bar
-
 ![Color scheme image](django_todo/static/images/readme/16.png)
 
 
