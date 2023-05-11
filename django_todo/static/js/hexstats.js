@@ -5,8 +5,8 @@ var myChart = new Chart(ctx, {
     data: {
         labels: labels,
         datasets: [{
-            label: 'Last 6 months expenses',
-            data: [12, 19, 3, 5, 2, 3],
+            label: 'Last 6 months income',
+            data: data,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -29,20 +29,20 @@ var myChart = new Chart(ctx, {
     options: {
         title: {
             display: true,
-            text: 'Expenses per category',
+            text: 'Income per sourcce',
          },
         },
     });
 }
 
 const getChartData = () => {
-    fetch('/expense_category_summary')
+    fetch('/income/income_source_summary')
         .then((res) => res.json())
         .then((results) => {
-            const category_data = results.expense_category_data;
+            const source_data = results.income_source_data;
             const [labels, data] = [
-                Object.keys(category_data),
-                Object.values(category_data)
+                Object.keys(source_data),
+                Object.values(source_data)
             ];
 
         renderChart(data, labels);
