@@ -15,8 +15,9 @@ from expenses.models import Category, Expense
 
 # Create your views here.
 
-# It first checks if the request method is POST, and then extracts 
+# It first checks if the request method is POST, and then extracts
 # the search string from the POST request body using the json.loads function.
+
 
 def search_income(request):
     if request.method == 'POST':
@@ -37,20 +38,18 @@ def index(request):
     paginator = Paginator(income, 5)
     page_number = request.GET.get('page')
     page_obj = Paginator.get_page(paginator, page_number)
-    
-    if UserPreference.objects.filter(user = request.user).exists():
-            currency = UserPreference.objects.get(user = request.user).currency
+
+    if UserPreference.objects.filter(user=request.user).exists():
+        currency = UserPreference.objects.get(user=request.user).currency
     else:
         currency = 'INR - Indian Rupee'
-    
-   
+
     context = {
         'income': income,
         'page_obj': page_obj,
         'currency': currency
     }
-    
-    
+
     return render(request, 'income/index.html', context)
 
 
@@ -87,14 +86,14 @@ def add_income(request):
 
 @login_required(login_url='/authentication/login')
 def income_edit(request, id):
-    
+
     # Retrieve the income record to be edited based on the id parameter
-    
+
     income = UserIncome.objects.get(pk=id)
-    
+
     # Get all sources for the source dropdown list in the form
     sources = Source.objects.all()
-    
+
     # Set the context dictionary to be used in rendering the template
     context = {
         'income': income,
@@ -135,53 +134,54 @@ def delete_income(request, id):
     return redirect('income')
 
 
-
 def expense_source_summary(request):
     todays_date = datetime.date.today()
     six_months_ago = todays_date-datetime.timedelta(days=30*6)
     incomes = UserIncome.objects.filter(owner=request.user,
-                date__gte=six_months_ago, date__lte=todays_date)
-    
+                                        date__gte=six_months_ago, date__lte=todays_date)
+
     finalrep = {}
-    
+
     def get_category(income):
-        return income.source    
+        return income.source
     category_list = list(set(map(get_category, incomes)))
-    
+
     def get_income_category_amount(source):
         amount = 0
         filtered_by_category = incomes.filter(source=source)
-        
+
         for item in filtered_by_category:
             amount += item.amount
-        
+
         return amount
-    
+
     for x in incomes:
         for y in category_list:
             finalrep[y] = get_income_category_amount(y)
-        
+
     return JsonResponse({'expense_category_data': finalrep}, safe=False)
+
 
 def hexstats_view(request):
     return render(request, 'income/hexstats.html')
 
 
 def export_csv(request):
-    response = HttpResponse(content_type= 'text/csv')
-    
+    response = HttpResponse(content_type='text/csv')
+
     response['Content-Disposition'] = 'attachment; filename="Incomes{}.csv"'.format(str(datetime.datetime.now()))
-  
+
     writer = csv.writer(response)
-    writer.writerow(['Amount', 'Description', 'Source','Date'])
-    
+    writer.writerow(['Amount', 'Description', 'Source', 'Date'])
+
     incomes_Exp = UserIncome.objects.filter(owner=request.user)
-    
+
     for income in incomes_Exp:
         writer.writerow([income.amount, income.description,
-                         income.source, income.date]) 
-        
+                         income.source, income.date])
+
     return response
+
 
 def export_excel(request):
     response = HttpResponse(content_type='application/ms-excel')
@@ -191,21 +191,21 @@ def export_excel(request):
     row_num = 0
     font_style = xlwt.XFStyle()
     font_style.font.bold = True
-    
-    columns = ['Amount', 'Description', 'Source','Date']
-    
+
+    columns = ['Amount', 'Description', 'Source', 'Date']
+
     for col_num in range(len(columns)):
         ws.write(row_num, col_num, columns[col_num], font_style)
-        
+
     font_style = xlwt.XFStyle()
-    
+
     rows = UserIncome.objects.filter(owner=request.user).values_list('amount', 'description', 'source', 'date')
-    
+
     for row in rows:
-        row_num+=1
-        
+        row_num += 1
+
         for col_num in range(len(row)):
             ws.write(row_num, col_num, str(row[col_num]), font_style)
     wb.save(response)
-    
+
     return response
