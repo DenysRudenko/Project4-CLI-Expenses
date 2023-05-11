@@ -6,7 +6,7 @@ from django.utils.timezone import now
 
 
 class UserIncome(models.Model):
-    amount = models.FloatField()  # DECIMAL
+    amount = models.FloatField()
     date = models.DateField(default=now)
     description = models.TextField()
     owner = models.ForeignKey(to=User, on_delete=models.CASCADE)
