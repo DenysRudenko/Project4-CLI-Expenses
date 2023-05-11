@@ -1,4 +1,9 @@
+import threading
 from django.shortcuts import render, redirect
+from django.contrib import auth
+from django.urls import reverse
+from django.contrib.auth.tokens import PasswordResetTokenGenerator
+from .utils import account_activation_token
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
 from django.contrib.sites.shortcuts import get_current_site
 from django.core.mail import send_mail
@@ -13,21 +18,15 @@ from validate_email import validate_email
 from django.contrib import messages
 from django.core.mail import EmailMessage
 from django.contrib.sites.shortcuts import get_current_site
-from django.utils.encoding import force_bytes, force_str, DjangoUnicodeDecodeError
-from django.urls import reverse
-from django.contrib import auth
-from django.contrib.auth.tokens import PasswordResetTokenGenerator
-from .utils import account_activation_token
-import threading
-
-
-"""
-The purpose of this class is to send an email message in a separate thread
-from the main application thread.
-"""
+from django.utils.encoding import force_bytes, force_str
+from django.utils.encoding import DjangoUnicodeDecodeError
 
 
 class EmailThread(threading.Thread):
+    """
+    The purpose of this class is to send an email message in a separate thread
+    from the main application thread.
+    """
     def __init__(self, email):
         self.email = email
         threading.Thread.__init__(self)
@@ -36,12 +35,10 @@ class EmailThread(threading.Thread):
         self.email.send(fail_silently=False)
 
 
-"""
-Validate email addresses before allowing users to create new accounts
-"""
-
-
 class EmailValidationView(View):
+    """
+    Validate email addresses before allowing users to create new accounts
+    """
     def post(self, request):
         data = json.loads(request.body)
         email = data['email']
@@ -55,31 +52,29 @@ class EmailValidationView(View):
         return JsonResponse({'email_valid': True})
 
 
-"""
-Validate usernames before allowing users to create new account
-"""
-
-
 class UsernameValidationView(View):
+    """
+    Validate usernames before allowing users to create new account
+    """
     def post(self, request):
         data = json.loads(request.body)
         username = data['username']
         if not str(username).isalnum():
-            return JsonResponse({'username_error': 'username should only contain alphanumeric characters!'}, status=400)
+            err_str = 'username should only contain alphanumeric characters!'
+            return JsonResponse({'username_error': err_str}, status=400)
         if User.objects.filter(username=username).exists():
-            return JsonResponse({'username_error': 'sorry username in use, choose another one! '}, status=409)
+            err_str = 'sorry username in use, choose another one!'
+            return JsonResponse({'username_error': err_str}, status=409)
         return JsonResponse({'username_valid': True})
 
 
-"""
-The view renders the registration form and returns it as an HTTP response,
-along with a success message indicating that the account has been created.
-If any of the validations fail, the view re-renders the registration form
-and returns it with an appropriate error message.
-"""
-
-
 class RegistrationView(View):
+    """
+    The view renders the registration form and returns it as an HTTP response,
+    along with a success message indicating that the account has been created.
+    If any of the validations fail, the view re-renders the registration form
+    and returns it with an appropriate error message.
+    """
     def get(self, request):
         return render(request, 'authentication/register.html')
 
@@ -131,15 +126,13 @@ class RegistrationView(View):
         return render(request, 'authentication/register.html')
 
 
-"""
-If the token is not valid, the user is redirected to the login page with
-a message indicating that the user has already been activated.
-If an error occurs during the process, the user is redirected
-to the login page without any action taken.
-"""
-
-
 class VerificationView(View):
+    """
+    If the token is not valid, the user is redirected to the login page with
+    a message indicating that the user has already been activated.
+    If an error occurs during the process, the user is redirected
+    to the login page without any action taken.
+    """
     def get(self, request, uidb64, token):
         try:
             id = force_str(urlsafe_base64_decode(uidb64))
@@ -158,14 +151,12 @@ class VerificationView(View):
         return redirect('login')
 
 
-"""
-It displays a message asking the user to check their
-email for activation. If authentication fails, it displays an error
-message asking the user to try again.
-"""
-
-
 class LoginView(View):
+    """
+    It displays a message asking the user to check their
+    email for activation. If authentication fails, it displays an error
+    message asking the user to try again.
+    """
     def get(self, request):
         return render(request, 'authentication/login.html')
 
@@ -182,8 +173,8 @@ class LoginView(View):
                                      user.username +
                                      '. You are now logged in.')
                     return redirect('expenses')
-
-                messages.error(request, 'Account is not active, please check your email.')
+                err_str = 'Account is not active, please check your email.'
+                messages.error(request, err_str)
                 return render(request, 'authentication/login.html')
 
             messages.error(request, 'Invalid credentials, try again.')
@@ -200,16 +191,14 @@ class LogoutView(View):
         return redirect('login')
 
 
-"""
-If the user object exists, the view creates a password reset link with
-the user's primary key and a token.
-If the email is sent successfully, the view returns a success message
-to the user on the same page, instructing them to check their email for
-further instructions.
-"""
-
-
 class RequestPasswordResetEmail(View):
+    """
+    If the user object exists, the view creates a password reset link with
+    the user's primary key and a token.
+    If the email is sent successfully, the view returns a success message
+    to the user on the same page, instructing them to check their email for
+    further instructions.
+    """
     def get(self, request):
         return render(request, 'authentication/reset-password.html')
 
@@ -252,7 +241,8 @@ class RequestPasswordResetEmail(View):
             )
             EmailThread(email).start()
 
-        messages.success(request, 'We have sent you an email to reset your password.')
+        inf_str = 'We have sent you an email to reset your password.'
+        messages.success(request, inf_str)
         return render(request, 'authentication/reset-password.html')
 
 
@@ -268,7 +258,8 @@ class CompletePasswordReset(View):
             user = User.objects.get(pk=user_id)
 
             if not PasswordResetTokenGenerator().check_token(user, token):
-                messages.info(request, 'Password link is invalid! Please request a new one!')
+                err_str = 'Password link is invalid! Please request a new one!'
+                messages.info(request, err_str)
                 return render(request, 'authentication/reset-password.html')
         except Exception as identifier:
 
@@ -276,14 +267,13 @@ class CompletePasswordReset(View):
 
         return render(request, 'authentication/set-new-password.html', context)
 
-
-"""
-This implementation checks if the passwords
-match and if they have at least six characters.
-It then sets the new password and saves the user object.
-"""
-
     def post(self, request, uidb64, token):
+        """
+        This implementation checks if the passwords
+        match and if they have at least six characters.
+        It then sets the new password and saves the user object.
+        """
+
         context = {
             'uidb64': uidb64,
             'token': token,
@@ -313,4 +303,5 @@ It then sets the new password and saves the user object.
             return redirect('login')
         except Exception as identifier:
             messages.info(request, 'Something went wrong!')
-            return render(request, 'authentication/set-new-password.html', context)
+            return render(request,
+                          'authentication/set-new-password.html', context)
