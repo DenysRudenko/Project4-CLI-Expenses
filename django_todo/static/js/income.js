@@ -38,7 +38,7 @@ var incomeChart = new Chart(ctx, {
     });
 }
 
-const getChartData = () => {
+const getIncomeChartData = () => {
     console.log("Test?")
     fetch('/income_source_summary')
         .then(res => res.json())
@@ -53,4 +53,4 @@ const getChartData = () => {
         });
 };
 
-document.onload = getChartData();
+document.onload = getIncomeChartData();
