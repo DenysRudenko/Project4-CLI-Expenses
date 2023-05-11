@@ -1,11 +1,11 @@
 const renderChart = (data, labels) => {
-var ctx = document.getElementById('myChart').getContext("2d");
-var myChart = new Chart(ctx, {
+var ctx = document.getElementById('incomeChart').getContext("2d");
+var incomeChart = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: labels,
         datasets: [{
-            label: 'Last 6 months expenses',
+            label: 'Last 6 months incomes',
             data: [12, 19, 3, 5, 2, 3],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
