@@ -174,7 +174,7 @@ def expense_edit(request, id):
 
 #  Allows you do delete expense
 def delete_expense(request, id):
-    if not request.user.is_authenticated():
+    if not request.user.is_authenticated:
         return redirect('authentication/login')
 
     expense = Expense.objects.get(pk=id)
