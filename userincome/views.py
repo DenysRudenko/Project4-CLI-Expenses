@@ -15,18 +15,23 @@ from expenses.models import Category, Expense
 
 # Create your views here.
 
-# It first checks if the request method is POST, and then extracts
-# the search string from the POST request body using the json.loads function.
-
 
 def search_income(request):
+    """
+    It first checks if the request method is POST, and then extracts
+    the search string from the POST request body using the json.loads function.
+    """
     if request.method == 'POST':
         search_str = json.loads(request.body).get('searchText')
-        income = UserIncome.objects.filter(
-            amount__istartswith=search_str, owner=request.user) | UserIncome.objects.filter(
-            date__istartswith=search_str, owner=request.user) | UserIncome.objects.filter(
-            description__icontains=search_str, owner=request.user) | UserIncome.objects.filter(
+        cond1 = UserIncome.objects.filter(
+            amount__istartswith=search_str, owner=request.user)
+        cond2 = UserIncome.objects.filter(
+            date__istartswith=search_str, owner=request.user)
+        cond3 = UserIncome.objects.filter(
+            description__icontains=search_str, owner=request.user)
+        cond4 = UserIncome.objects.filter(
             source__icontains=search_str, owner=request.user)
+        income = cond1 | cond2 | cond3 | cond4
         data = income.values()
         return JsonResponse(list(data), safe=False)
 
@@ -105,8 +110,11 @@ def income_edit(request, id):
     if request.method == 'POST':
         amount = request.POST['amount']
 
-     # If amount is not provided, display an error message and render the edit_income.html template
         if not amount:
+            """
+            If amount is not provided, display an error message
+            and render the edit_income.html template
+            """
             messages.error(request, 'Amount is required')
             return render(request, 'income/edit_income.html', context)
         description = request.POST['description']
@@ -138,7 +146,8 @@ def expense_source_summary(request):
     todays_date = datetime.date.today()
     six_months_ago = todays_date-datetime.timedelta(days=30*6)
     incomes = UserIncome.objects.filter(owner=request.user,
-                                        date__gte=six_months_ago, date__lte=todays_date)
+                                        date__gte=six_months_ago,
+                                        date__lte=todays_date)
 
     finalrep = {}
 
@@ -169,7 +178,8 @@ def hexstats_view(request):
 def export_csv(request):
     response = HttpResponse(content_type='text/csv')
 
-    response['Content-Disposition'] = 'attachment; filename="Incomes{}.csv"'.format(str(datetime.datetime.now()))
+    response['Content-Disposition'] = 'attachment; filename="Incomes{}.csv"'.\
+        format(str(datetime.datetime.now()))
 
     writer = csv.writer(response)
     writer.writerow(['Amount', 'Description', 'Source', 'Date'])
@@ -185,7 +195,8 @@ def export_csv(request):
 
 def export_excel(request):
     response = HttpResponse(content_type='application/ms-excel')
-    response['Content-Disposition'] = 'attachment; filename="Incomes{}.xls"'.format(str(datetime.datetime.now()))
+    response['Content-Disposition'] = 'attachment; filename="Incomes{}.xls"'.\
+        format(str(datetime.datetime.now()))
     wb = xlwt.Workbook(encoding='utf-8')
     ws = wb.add_sheet('Incomes')
     row_num = 0
@@ -199,7 +210,8 @@ def export_excel(request):
 
     font_style = xlwt.XFStyle()
 
-    rows = UserIncome.objects.filter(owner=request.user).values_list('amount', 'description', 'source', 'date')
+    rows = UserIncome.objects.filter(owner=request.user).\
+        values_list('amount', 'description', 'source', 'date')
 
     for row in rows:
         row_num += 1
