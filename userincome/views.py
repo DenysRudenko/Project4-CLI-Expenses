@@ -137,7 +137,7 @@ def income_edit(request, id):
 
 def delete_income(request, id):
     if not request.user.is_authenticated:
-        return redirect('authentication/login')
+        return redirect('login')
 
     income = UserIncome.objects.get(pk=id)
     income.delete()
