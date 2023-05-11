@@ -142,7 +142,7 @@ def delete_income(request, id):
     return redirect('income')
 
 
-def expense_source_summary(request):
+def income_source_summary(request):
     todays_date = datetime.date.today()
     six_months_ago = todays_date-datetime.timedelta(days=30*6)
     incomes = UserIncome.objects.filter(owner=request.user,
@@ -151,24 +151,24 @@ def expense_source_summary(request):
 
     finalrep = {}
 
-    def get_category(income):
+    def get_source(income):
         return income.source
-    category_list = list(set(map(get_category, incomes)))
+    source_list = list(set(map(get_source, incomes)))
 
-    def get_income_category_amount(source):
+    def get_income_source_amount(source):
         amount = 0
-        filtered_by_category = incomes.filter(source=source)
+        filtered_by_source = incomes.filter(source=source)
 
-        for item in filtered_by_category:
+        for item in filtered_by_source:
             amount += item.amount
 
         return amount
 
     for x in incomes:
-        for y in category_list:
-            finalrep[y] = get_income_category_amount(y)
+        for y in source_list:
+            finalrep[y] = get_income_source_amount(y)
 
-    return JsonResponse({'expense_category_data': finalrep}, safe=False)
+    return JsonResponse({'income_source_data': finalrep}, safe=False)
 
 
 def hexstats_view(request):

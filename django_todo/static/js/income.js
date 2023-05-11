@@ -40,13 +40,13 @@ var myChart = new Chart(ctx, {
 
 const getChartData = () => {
     console.log("Test?")
-    fetch('/expense_source_summary')
+    fetch('/income_source_summary')
         .then(res => res.json())
         .then(results => {
-            const category_data = results.expense_category_data;
+            const source_data = results.income_source_data;
             const [labels, data] = [
-                Object.keys(category_data),
-                Object.values(category_data)
+                Object.keys(source_data),
+                Object.values(source_data)
             ];
 
         renderChart(data, labels);
