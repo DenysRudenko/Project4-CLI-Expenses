@@ -9,49 +9,6 @@ Managing expenses and incomes can be a daunting task, especially when it comes t
 Visit the deployed website [here](https://trulyexpenses.herokuapp.com/).
 
 
-## Table of Contents
-
-1. [User Experience (UX)](#user-experience-ux)
-    1. [Strategy](#strategy)
-        1. [Project Goals](#project-goals)
-        2. [User Goals](#user-goals)
-        3. [Strategy Table](#strategy-table)
-    2. [Scope](#scope)
-        1. [User Stories](#user-stories)
-    3. [Structure](#structure)
-    4. [Skeleton](#skeleton)
-    5. [Surface](#surface)
-2. [Features](#features)
-    1. [General](#general)
-    2. [Home Page](#home-page)
-    3. [About Page](#about-page)
-    4. [Search Results Page](#search-results-page)
-    5. [Question Detail Page](#question-detail-page)
-    6. [Ask Question Page](#ask-question-page)
-    7. [Leave Reply Page](#leave-reply-page)
-    8. [Edit Question Page](#edit-question-page)
-    9. [Delete Question Page](#delete-question-page)
-    10. [Edit Reply Page](#edit-reply-page)
-    11. [Delete Reply Page](#delete-reply-page)
-    12. [Authentication Pages](#authentication-pages)
-3. [Technologies Used](#technologies-used)
-    1. [Languages Used](#languages-used)
-    2. [Libraries and Frameworks](#languages-and-frameworks)
-    3. [Packages / Dependecies Installed](#packages--dependecies-installed)
-    4. [Database Management](#database-management)
-    5. [Tools and Programs](#tools-and-programs)
-4. [Testing](#testing)
-    1. [Go to TESTING.md](https://github.com/josswe26/code-buddy/blob/main/TESTING.md#code-buddy-testing)
-5. [Deployment](#deployment)
-6. [Finished Product](#finished-product)
-7. [Credits](#credits)
-8. [Known Bugs](#known-bugs)
-9. [Acknowledgements](#acknowledgements)
-
-
-***
-
-
 ## User Experience (UX)
 
 ### Strategy
@@ -84,8 +41,6 @@ Visit the deployed website [here](https://trulyexpenses.herokuapp.com/).
 * As a Site User, I want to be able to help make the content more relevant.
 
 
-
-
 ### Scope
 
 The first phase will include the features that have been identified in order to build the minimum viable product.
@@ -93,7 +48,7 @@ The first phase will include the features that have been identified in order to 
 
 ### Mockflow
 
-At the start I created a website template  for understanding what should be going on.
+At the start, I created a website template to understand what should be going on.
 
 ![Code Buddy website map](django_todo/static/images/readme/23.png)
 
@@ -131,13 +86,13 @@ After successfull registration, user will receive an confirmation email, to foll
 
 ![Color scheme image](django_todo/static/images/readme/3.png)
 
-In a good programming practice user should login to tour website onl after confirmation email accepted.It`s really import to pay attention to make login and registration securely.
+In good programming practice, users should only be able to log in to your website after accepting a confirmation email. It's really important to pay attention to making login and registration secure.
 
 ![Color scheme image](django_todo/static/images/readme/4.png)
 
 ### Main page
 
-After succesfull login user can interact with a website. He can create expenses, income , edit them, delete them, and count how much he spend by the group and categories with additional information. It`s really important to keep on track on counting you budget.
+After a successful login, the user can interact with the website. They can create expenses and income, edit them, delete them, and track their spending by group and category, along with additional information. It's really important to stay on track with counting your budget
 
 ![Color scheme image](django_todo/static/images/readme/5.png)
 
@@ -163,59 +118,72 @@ As you see, pehaos its not in a good format but, you could see your table clean 
 
 ### Search bar
 
-I deployedspecial are where you can find your incomes or expenses much more easier by targeting it by speacial value.
+"I have deployed a special area where you can find your incomes or expenses much more easily by targeting them with special values.
 
 ![Color scheme image](django_todo/static/images/readme/15.png)
 
+### Currency
 
-
-![Color scheme image](django_todo/static/images/readme/12.png)
-
-
+In additional section you could pick any currency you would like.
 
 ![Color scheme image](django_todo/static/images/readme/11.png)
+### Model Graph
 
+A model graph, also known as a computational graph, is a way of representing a mathematical model or algorithm as a directed graph, where nodes represent mathematical operations and edges represent the flow of data between those operations. Model graphs are commonly used in machine learning to represent neural networks and other types of models.
 
+Model graphs can be helpful in a number of ways:
+
+Visualization: Model graphs provide a visual representation of the model or algorithm, which can help researchers and engineers better understand how the model works and identify areas for improvement.
+
+Debugging: When a model is not performing as expected, a model graph can help pinpoint where errors are occurring by tracing the flow of data through the graph.
+
+Optimization: By analyzing a model graph, researchers can identify parts of the model that are computationally expensive and optimize those parts to improve performance.
+
+Deployment: Model graphs can be used to deploy models to production systems, such as mobile devices or cloud servers, by converting the graph to a format that can be executed efficiently on those systems.
 
 
 ![Color scheme image](django_todo/static/images/readme/7.png)
 
+### Create Expanses
+
+In this section you could create expanses or incomes and make a description about it.
 
 
-![Color scheme image](django_todo/static/images/readme/9.png)
+![Color scheme image](django_todo/static/images/readme/12.png)
 
-
-
-![Color scheme image](django_todo/static/images/readme/14.png)
-
-
-
-![Color scheme image](django_todo/static/images/readme/13.png)
-
-
+### Lighthouse
+As I was really really late with a submission my statistics isnt that good how it suppost to be.
 
 ![Color scheme image](django_todo/static/images/readme/20.png)
 
+### CSS
 
+Mostly I used bootstrap, so in css valiadation I got a lot of errors and can do nothing with that. I suppose I have a small experience it it.
 
 ![Color scheme image](django_todo/static/images/readme/17.png)
 
+### Admin User
 
+I decided to style admin panel and into some random colours from internet. Alse I asked my friends to login to my website to test it out and tell me the bugs or dislikes aobut this website.
 
 ![Color scheme image](django_todo/static/images/readme/21.png)
 
+### Email
 
+I created a new email to allow bot to send messages from website.
 
 ![Color scheme image](django_todo/static/images/readme/10.png)
-
-
-
-![Color scheme image](django_todo/static/images/readme/18.png)
-
 
 
 ![Color scheme image](django_todo/static/images/readme/16.png)
 
 
+### Django databases
+
+I had a bug where i created a user and I had no chance to login anymore, I cheacked in internet information about how to check it, and i found that cool pic.
 
 ![Color scheme image](django_todo/static/images/readme/19.png)
+
+
+
+
