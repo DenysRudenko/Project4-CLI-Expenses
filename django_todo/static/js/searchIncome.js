@@ -12,7 +12,7 @@ searchField.addEventListener("keyup", (e) => {
   if (searchValue.trim().length > 0) {
     paginationContainer.style.display = "none";
     tbody.innerHTML = "";
-    fetch("/search-income", {
+    fetch("/income/search-income", {
       body: JSON.stringify({ searchText: searchValue }),
       method: "POST",
     })
