@@ -40,7 +40,7 @@ var incomeChart = new Chart(ctx, {
 
 const getIncomeChartData = () => {
     console.log("Test?")
-    fetch('/income_source_summary')
+    fetch('/income/income_source_summary')
         .then(res => res.json())
         .then(results => {
             const source_data = results.income_source_data;
