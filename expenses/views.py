@@ -174,7 +174,7 @@ def expense_edit(request, id):
 
 #  Allows you do delete expense
 def delete_expense(request, id):
-    if request.user is None:
+    if request.user.is_anonymous():
         return
 
     expense = Expense.objects.get(pk=id)

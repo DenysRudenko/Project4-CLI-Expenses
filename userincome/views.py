@@ -136,7 +136,7 @@ def income_edit(request, id):
 
 
 def delete_income(request, id):
-    if request.user is None:
+    if request.user.is_anonymous():
         return
 
     income = UserIncome.objects.get(pk=id)
