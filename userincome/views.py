@@ -136,6 +136,9 @@ def income_edit(request, id):
 
 
 def delete_income(request, id):
+    if request.user is None:
+        return
+
     income = UserIncome.objects.get(pk=id)
     income.delete()
     messages.success(request, 'record removed')
