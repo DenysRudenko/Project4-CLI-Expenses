@@ -22,7 +22,7 @@
       <form action="{% url 'add-income' %}" method="post">
         {% include 'partials/_messages.html'%} {% csrf_token %}
         <div class="form-group">
-          <label for="">Amount</label>
+          <label>Amount</label>
           <input
             type="text"
             class="form-control form-control-sm"
@@ -31,7 +31,7 @@
           />
         </div>
         <div class="form-group">
-          <label for="">Description</label>
+          <label>Description</label>
           <input
             type="text"
             class="form-control form-control-sm"
@@ -40,7 +40,7 @@
           />
         </div>
         <div class="form-group">
-          <label for="">Sources</label>
+          <label>Sources</label>
           <select class="form-control" name="source">
             {% for source in sources%}
             <option name="source" value="{{source.name}}"
@@ -50,7 +50,7 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="">Date of Income</label>
+          <label>Date of Income</label>
           <input
             type="date"
             class="form-control form-control-sm"
