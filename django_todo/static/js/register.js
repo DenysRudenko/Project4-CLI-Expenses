@@ -8,6 +8,7 @@ const showPasswordToggle = document.querySelector(".showPasswordToggle");
 const submitBtn = document.querySelector(".submit-btn");
 
 
+// This is a function that handles toggling the visibility of a password input field.
 const handleToggleInput = (e) => {
   if (showPasswordToggle.textContent === "SHOW") {
     showPasswordToggle.textContent = "HIDE";
@@ -20,6 +21,11 @@ const handleToggleInput = (e) => {
 
 showPasswordToggle.addEventListener("click", handleToggleInput);
 
+
+// This code adds an event listener to the emailField element,
+// which listens for keyup events.
+// When a keyup event occurs, the function defined as
+// the second argument is executed.
 emailField.addEventListener("keyup", (e) => {
   const emailVal = e.target.value;
 
@@ -46,6 +52,11 @@ emailField.addEventListener("keyup", (e) => {
   }
 });
 
+
+// This code adds an event listener to the usernameField element,
+// which listens for keyup events.
+// When a keyup event occurs, the function defined
+// as the second argument is executed.
 usernameField.addEventListener("keyup", (e) => {
   const usernameVal = e.target.value;
 
