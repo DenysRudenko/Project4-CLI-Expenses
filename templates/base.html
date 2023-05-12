@@ -26,7 +26,7 @@
         style="display: flex; flex-direction: row; align-items: center;"
       >
         <li class="nav-item text-nowrap">
-          <span class="nav-link" href="">
+          <span class="nav-link">
             ({{request.user.username}})
           </span>
         </li>
@@ -48,7 +48,7 @@
       <div class="row">
         {% include 'partials/_sidebar.html' %}
 
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <main class="col-md-9 ml-sm-auto col-lg-10 px-4">
           {% block content %} {% endblock %}
         </main>
       </div>
