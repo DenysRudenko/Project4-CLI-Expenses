@@ -1,5 +1,7 @@
 const renderChart = (data, labels) => {
 var ctx = document.getElementById('myChart').getContext("2d");
+
+// Chart propertites
 var myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
@@ -35,6 +37,8 @@ var myChart = new Chart(ctx, {
     });
 }
 
+// This is a function that retrieves expense category data from the server
+// and renders it in a chart using the Chart.js library.
 const getChartData = () => {
     fetch('/income/income_source_summary')
         .then((res) => res.json())

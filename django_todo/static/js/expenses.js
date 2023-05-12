@@ -1,5 +1,7 @@
 const renderChart = (data, labels) => {
 var ctx = document.getElementById('myChart').getContext("2d");
+
+// Chart properties
 var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
@@ -38,6 +40,9 @@ var myChart = new Chart(ctx, {
     });
 }
 
+
+// This is a function that retrieves expense category data from the server
+// and renders it in a chart using the Chart.js library.
 const getChartData = () => {
     console.log("Test?")
     fetch('/expense_category_summary')
@@ -53,4 +58,6 @@ const getChartData = () => {
         });
 };
 
+
+// run getChartData
 document.onload = getChartData();

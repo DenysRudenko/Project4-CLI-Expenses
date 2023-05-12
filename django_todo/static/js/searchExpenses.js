@@ -7,6 +7,8 @@ const tbody = document.querySelector(".table-body");
 
 tableOutput.style.display = "none";
 
+//This function listens for changes in the search field and 
+//performs a search for income based on the search text entered by the user.
 searchField.addEventListener("keyup", (e) => {
   const searchValue = e.target.value;
 
