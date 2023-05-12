@@ -21,7 +21,7 @@
       <form action="{% url 'add-expenses' %}" method="post">
         {% include 'partials/_messages.html'%} {% csrf_token %}
         <div class="form-group">
-          <label for="">Amount</label>
+          <label>Amount</label>
           <input
             type="text"
             class="form-control form-control-sm"
@@ -30,7 +30,7 @@
           />
         </div>
         <div class="form-group">
-          <label for="">Description</label>
+          <label>Description</label>
           <input
             type="text"
             class="form-control form-control-sm"
@@ -39,7 +39,7 @@
           />
         </div>
         <div class="form-group">
-          <label for="">Category</label>
+          <label>Category</label>
           <select class="form-control" name="category">
             {% for category in categories%}
             <option name="category" value="{{category.name}}"
@@ -50,7 +50,7 @@
           </select>
         </div>
         <div class="form-group">
-          <label for="">Date of Expense</label>
+          <label>Date of Expense</label>
           <input
             type="date"
             class="form-control form-control-sm"
