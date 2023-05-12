@@ -1,5 +1,4 @@
 {% load static %}
-<!DOCTYPE html>
 <html lang="en">
     <meta charset="utf-8" />
     <meta
@@ -26,7 +25,7 @@
         style="display: flex; flex-direction: row; align-items: center;"
       >
         <li class="nav-item text-nowrap">
-          <span class="nav-link">
+          <span class="nav-link" href="">
             ({{request.user.username}})
           </span>
         </li>
@@ -48,7 +47,7 @@
       <div class="row">
         {% include 'partials/_sidebar.html' %}
 
-        <main class="col-md-9 ml-sm-auto col-lg-10 px-4">
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
           {% block content %} {% endblock %}
         </main>
       </div>
