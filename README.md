@@ -1,7 +1,7 @@
 # CLI Expenses
 
 
-![CLI Expenses mockup images](django_todo/static/images/readme/5.png)
+![CLI Expenses mockup images](django_todo/static/images/main.gif)
 
 
 Managing expenses and incomes can be a daunting task, especially when it comes to keeping track of all the details and making sure everything is in order. However, it is an essential part of maintaining financial stability and achieving your financial goals.
