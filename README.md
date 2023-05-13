@@ -171,33 +171,38 @@ A clear and organized folder structure makes it easy for developers to find and 
 
 Page | Desktop Version | Mobile Version
 --- | --- | ---
-Expenses / Incomes | ![Expenses/Income/index dashboard](django_todo/static/images/readme/mokflow.png) | ![Mobile index / user logged out wireframe image](django_todo/static/images/readme/)
-Expenses / Income Sum | ![Chart weblink](django_todo/static/images/readme/chart.png) | ![Mobile sign up wireframe image](assets/wireframes/signup_mobile.png)
-Edit expense/income | ![Desktop log in wireframe image](django_todo/static/images/readme/edit.png) | ![Mobile log in wireframe image](assets/wireframes/login_mobile.png)
-Currency | ![Desktop index / user logged in wireframe image](django_todo/static/images/readme/currency.png) | ![Mobile index / user logged out wireframe image](assets/wireframes/index_mobile_logged_in.png)
-Login | ![Desktop ask question wireframe image](django_todo/static/images/readme/login.png) | ![Mobile ask question wireframe image](assets/wireframes/ask_question_mobile.png)
-Register | ![Desktop open question wireframe image](django_todo/static/images/readme/register.png) | ![Mobile open question wireframe image](assets/wireframes/question_mobile.png)
-Reset | ![Desktop leave reply wireframe image](django_todo/static/images/readme/reset.png) | ![Mobile leave reply wireframe image](assets/wireframes/leave_reply_mobile.png)
+Expenses / Incomes | ![Expenses/Income/index dashboard](django_todo/static/images/readme/mokflow.png) | ![Mobile index / user logged out wireframe image](django_todo/static/images/readme/mob1.png)
+Expenses / Income Sum | ![Chart weblink](django_todo/static/images/readme/chart.png) | ![Mobile sign up wireframe image](django_todo/static/images/readme/mob2.png)
+Edit expense/income | ![Desktop log in wireframe image](django_todo/static/images/readme/edit.png) | ![Mobile log in wireframe image](django_todo/static/images/readme/mob3.png)
+Currency | ![Desktop index / user logged in wireframe image](django_todo/static/images/readme/currency.png) | ![Mobile index / user logged out wireframe image](django_todo/static/images/readme/mob4.png)
+Login | ![Desktop ask question wireframe image](django_todo/static/images/readme/login.png) | ![Mobile ask question wireframe image](django_todo/static/images/readme/mob5.png)
+Register | ![Desktop open question wireframe image](django_todo/static/images/readme/register.png) | ![Mobile open question wireframe image](django_todo/static/images/readme/mob6.png)
+Reset | ![Desktop leave reply wireframe image](django_todo/static/images/readme/reset.png) | ![Mobile leave reply wireframe image](django_todo/static/images/readme/mob7.png)
 
 
 ### Surface
 
 #### Color Scheme
 
-![Color scheme image](assets/readme_files/color_scheme.png)
+![Color scheme image](django_todo/static/images/readme/color.png)
 
-The colors used in the website are a teal blue color (#3F778D) for secondary buttons, navbar links, as well as for main buttons and links transitions. Charcoal (#253A47) is used for the main text, footer background, main buttons and secondary buttons and links transitions.
+The colors used in the website are dark blue, turquoise and light green. (#019577, #09253a, #d9f0d1) For buttons I used light green color, dark blue for the header and left panel and turquoise for the text hover.
 
-A platinum (#E9EDE9) for the navigation bar and card footers background, footer and buttons content. A baby powder color (#FFFFFD) is also used in the main background and cards footer as well as for input fields.
+Also I used (#d3d3d3) light grey color for the body.
 
 The colors are were chosen keeping in mind simplicity but also providing the website a modern design. This in order to keep the focus on the content but also appealing for the users.
 
 
 #### Typography
 
-The main font being used in the site is Nunito, with sans-serif as a fallback in case Nunito doesn't get imported correctly. Roboto, with sans-serif as a fallback is used mainly for headings and the logo has been given the Quicksand font, with sans-serif as a fallback.
+The Fonts being used in the site is sans-serif and monospace for whole text and for the main menu navigation bar.
 
-Nunito and Roboto were chosen after some research on fonts that are better for reading. Specially Nunito which has been used as main font. Quicksand was used for the logo for design purposes.
+```css
+--font-family-sans-serif: "Segoe UI", "Source Sans Pro", Calibri, Candara,
+    Arial, sans-serif;
+--font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+```
 
 [Back to top ⇧](#code-buddy)
 
