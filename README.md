@@ -8,6 +8,16 @@ Managing expenses and incomes can be a daunting task, especially when it comes t
 
 Visit the deployed website [here](https://trulyexpenses.herokuapp.com/).
 
+## ATTENTION!
+
+Make sure you follow steps bellow to log in on the website:
+
+    * Register via application form, choose the username and password.
+    * You will receive a confirmation email, follow the steps in email provided.
+    * After successfully you confirm, use your username and password to log in.
+
+![Code Buddy Edit Question Page](django_todo/static/images/readme/conf.png)
+
 
 ## Table of Contents
 
@@ -24,9 +34,9 @@ Visit the deployed website [here](https://trulyexpenses.herokuapp.com/).
 2. [Features](#features)
     1. [General](#general)
     2. [Home Page](#home-page)
-    3. [About Page](#about-page)
+    3. [Chart Page](#chart-page)
     4. [Search Results Page](#search-results-page)
-    5. [Question Detail Page](#question-detail-page)
+    5. [Edit Expanse/Income Page](#edit-expenseincome-page)
     6. [Ask Question Page](#ask-question-page)
     7. [Leave Reply Page](#leave-reply-page)
     8. [Edit Question Page](#edit-question-page)
@@ -298,48 +308,32 @@ The Fonts being used in the site is sans-serif and monospace for whole text and 
 * Save button included.
 
 
-### Ask Question Page
-![Code Buddy Ask Question Page](assets/readme_files/code_buddy_ask_question.png)
+### Add Expanse/Income Page
+![Code Buddy Ask Question Page](django_todo/static/images/readme/addex.png)
 
-* Provide a form to allow registered Site Users to create a new question.
+* Provide a form to allow registered Site Users to create a new expense/income.
 
-### Leave Reply Page
-![Code Buddy Leave Reply Page](assets/readme_files/code_buddy_leave_reply.png)
+* There is few category list such as: travel, insurance, restaurant, family, rent, present, friends.
 
-* Provide a form to allow registered Site Users to create a new reply to the questions.
+### Currency Page
+![Code Buddy Leave Reply Page](django_todo/static/images/readme/currpage.png)
 
-
-### Edit Question Page
-![Code Buddy Edit Question Page](assets/readme_files/code_buddy_edit_question.png)
-
-* Provide a prepopulated form to allow the Site User to edit a question they created.
+* Provide a form to allow choose the currency wallet for your incomes/expenses.
 
 
-### Delete Question Page
-![Code Buddy Edit Question Page](assets/readme_files/code_buddy_delete_question.png)
+### Admin Page
+![Code Buddy Edit Question Page](django_todo/static/images/readme/admin.png)
 
-* Provide a form to allow the Site User to delete a question they created.
-
-
-### Edit Reply Page
-![Code Buddy Edit Question Page](assets/readme_files/code_buddy_edit_reply.png)
-
-* Provide a prepopulated form to allow the Site User to edit a reply they created.
-
-
-### Delete Reply Page
-![Code Buddy Edit Question Page](assets/readme_files/code_buddy_delete_reply.png)
-
-* Provide a form to allow the Site User to delete a reply they created.
+* Provide an admin access for the website where admin can do everything with users, expenses, incomes, groups.
 
 
 ### Authentication Pages
 
 Page | Purpose | Image |
 --- | --- | --- |
-Register | Allow the Site User to sign up an account for the website. | ![Code Buddy Sign Up Page](assets/readme_files/code_buddy_sing_up.png) |
-Login | Allow the Site User to sign in with their account. | ![Code Buddy Sign In Page](assets/readme_files/code_buddy_sign_in.png) |
-Logout | Allow the Site User to sign out from their account. | ![Code Buddy Sign Out Page](assets/readme_files/code_buddy_sign_out.png) |
+Register | Allow the Site User to sign up an account for the website. | ![Code Buddy Sign Up Page](django_todo/static/images/readme/registera.png) |
+Login | Allow the Site User to sign in with their account. | ![Code Buddy Sign In Page](django_todo/static/images/readme/log_in.png) |
+Logout | Allow the Site User to sign out from their account. | ![Code Buddy Sign Out Page](django_todo/static/images/readme/reset_pass.png) |
 
 
 [Back to top ⇧](#code-buddy)
