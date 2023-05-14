@@ -279,23 +279,23 @@ The Fonts being used in the site is sans-serif and monospace for whole text and 
 
 
 ### Search Results Page
-![Code Buddy About Page image](assets/readme_files/code_buddy_search_results.png)
+
+![Code Buddy About Page image](django_todo/static/images/readme/sfood.png)
 
 * Display information about the Search being handled
 
-* Display a paginated list of the questions matching the search and its relevant information for the user to identify.
+* Display a paginated list of the expenses/incomes matching the search and its relevant information for the user to identify.
 
 
-### Question Detail Page
-![Code Buddy Question Detail Page image](assets/readme_files/code_buddy_question_detail.png)
+### Edit Expense/Income Page
 
-* Display the full question a well as a list of its replies.
+![Code Buddy Question Detail Page image](django_todo/static/images/readme/editex.png)
 
-* Question and reply scores as well as voting possibilities for registered users is provided next to each item.
+* Display the full information about expense or income, such as description, amount, date, category.
 
-* For registered users, a Leave Reply button is provided to allow the user to access the Leave Reply page to create a new reply to the question.
+* Additional button to delete expense or income.
 
- * Edit and Question buttons are provided for the questions and replies the registered Site User has created.
+* Save button included.
 
 
 ### Ask Question Page
