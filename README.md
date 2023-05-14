@@ -500,18 +500,16 @@ Further reading and troubleshooting on cloning a repository from GitHub [here](h
 
 Page | Desktop | Mobile |
 --- | --- | --- |
-| Expenses | ![Desktop Home Page image](django_todo/static/images/readme/home.png) | ![Mobile Home Page image ](assets/readme_files/mobile_home.png) |
-| Incomes | ![Desktop About Page image](django_todo/static/images/readme/incomes.png) | ![Mobile About Page image](assets/readme_files/mobile_about.png) |
-| Expenses Chart | ![Desktop Search Results Page image](django_todo/static/images/readme/ChartSum.png) | ![Mobile Search Results Page image](assets/readme_files/mobile_search_results.png) |
-| Income Chart |![Desktop Question Detail Page image](django_todo/static/images/readme/IncomeChart.png) | ![Mobile Question Detail Page image](assets/readme_files/mobile_question_detail.png) |
-| Currency |![Desktop Ask Question Page image](django_todo/static/images/readme/curr_page.png) | ![Mobile Ask Question Page image](assets/readme_files/mobile_ask_question.png) |
-| Edit expenses/incomes |![Desktop Leave Reply Page image](django_todo/static/images/readme/edit_page.png) | ![Mobile Leave Reply Page image](assets/readme_files/mobile_leave_reply.png) |
-| Add expenses/icomes | ![Desktop Edit Question Page image](django_todo/static/images/readme/add_page.png) | ![Mobile Edit Question Page image](assets/readme_files/mobile_edit_question.png) |
+| Expenses | ![Desktop Home Page image](django_todo/static/images/readme/home.png) | ![Mobile Home Page image ](django_todo/static/images/readme/mob_ex.jpg) |
+| Incomes | ![Desktop About Page image](django_todo/static/images/readme/incomes.png) | ![Mobile About Page image](django_todo/static/images/readme/mob_inc.jpg) |
+| Expenses Chart | ![Desktop Search Results Page image](django_todo/static/images/readme/ChartSum.png) | ![Mobile Search Results Page image](django_todo/static/images/readme/mob_chart.jpg) |
+| Income Chart |![Desktop Question Detail Page image](django_todo/static/images/readme/IncomeChart.png) | ![Mobile Question Detail Page image](django_todo/static/images/readme/mob_chart2.jpg) |
+| Currency |![Desktop Ask Question Page image](django_todo/static/images/readme/curr_page.png) | ![Mobile Ask Question Page image](django_todo/static/images/readme/mob_currt.jpg) |
+| Edit expenses/incomes |![Desktop Leave Reply Page image](django_todo/static/images/readme/edit_page.png) | ![Mobile Leave Reply Page image](django_todo/static/images/readme/edit_mob.jpg) |
+| Add expenses/icomes | ![Desktop Edit Question Page image](django_todo/static/images/readme/add_page.png) | ![Mobile Edit Question Page image](django_todo/static/images/readme/add_mob.jpg) |
 | Sign Up |![Desktop Sign Up Page image](assets/readme_files/desktop_sign_up.png) | ![Mobile Sign Up Page image](assets/readme_files/mobile_sign_up.png) |
 | Sign In |![Desktop Sing In Page image](assets/readme_files/desktop_login.png) | ![](assets/readme_files/mobile_login.png) |
 | Sign Out |![Desktop Sign Out Page image](assets/readme_files/desktop_logout.png) | ![Mobile Sign Out Page image](assets/readme_files/mobile_logout.png) |
-| 404 Error |![Desktop 404 Error Page image](assets/readme_files/desktop_404.png) | ![Mobile 404 Error Page image](assets/readme_files/mobile_404.png) |
-
 
 [Back to top ⇧](#cli-expenses)
 
