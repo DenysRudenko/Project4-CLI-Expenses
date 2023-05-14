@@ -500,16 +500,13 @@ Further reading and troubleshooting on cloning a repository from GitHub [here](h
 
 Page | Desktop | Mobile |
 --- | --- | --- |
-| Home | ![Desktop Home Page image](assets/readme_files/desktop_home.png) | ![Mobile Home Page image ](assets/readme_files/mobile_home.png) |
-| About | ![Desktop About Page image](assets/readme_files/desktop_about.png) | ![Mobile About Page image](assets/readme_files/mobile_about.png) |
-| Search Results | ![Desktop Search Results Page image](assets/readme_files/desktop_search_results.png) | ![Mobile Search Results Page image](assets/readme_files/mobile_search_results.png) |
-| Question Detail |![Desktop Question Detail Page image](assets/readme_files/desktop_question_detail.png) | ![Mobile Question Detail Page image](assets/readme_files/mobile_question_detail.png) |
-| Ask Question |![Desktop Ask Question Page image](assets/readme_files/desktop_ask_question.png) | ![Mobile Ask Question Page image](assets/readme_files/mobile_ask_question.png) |
-| Leave Reply |![Desktop Leave Reply Page image](assets/readme_files/desktop_leave_reply.png) | ![Mobile Leave Reply Page image](assets/readme_files/mobile_leave_reply.png) |
-| Edit Question | ![Desktop Edit Question Page image](assets/readme_files/desktop_edit_question.png) | ![Mobile Edit Question Page image](assets/readme_files/mobile_edit_question.png) |
-| Delete Question |![Desktop Delete Question Page image](assets/readme_files/desktop_delete_question.png) | ![Mobile Delete Question Page image](assets/readme_files/mobile_delete_question.png) |
-| Edit Reply |![Desktop Edit Reply Page image](assets/readme_files/desktop_edit_reply.png) | ![Mobile Edit Reply Page image](assets/readme_files/mobile_edit_reply.png) |
-| Delete Reply |![Desktop Delete Reply Page image](assets/readme_files/desktop_delete_reply.png) | ![Mobile Delete Reply Page imag](assets/readme_files/mobile_delete_reply.png) |
+| Expenses | ![Desktop Home Page image](django_todo/static/images/readme/home.png) | ![Mobile Home Page image ](assets/readme_files/mobile_home.png) |
+| Incomes | ![Desktop About Page image](django_todo/static/images/readme/incomes.png) | ![Mobile About Page image](assets/readme_files/mobile_about.png) |
+| Expenses Chart | ![Desktop Search Results Page image](django_todo/static/images/readme/ChartSum.png) | ![Mobile Search Results Page image](assets/readme_files/mobile_search_results.png) |
+| Income Chart |![Desktop Question Detail Page image](django_todo/static/images/readme/IncomeChart.png) | ![Mobile Question Detail Page image](assets/readme_files/mobile_question_detail.png) |
+| Currency |![Desktop Ask Question Page image](django_todo/static/images/readme/curr_page.png) | ![Mobile Ask Question Page image](assets/readme_files/mobile_ask_question.png) |
+| Edit expenses/incomes |![Desktop Leave Reply Page image](django_todo/static/images/readme/edit_page.png) | ![Mobile Leave Reply Page image](assets/readme_files/mobile_leave_reply.png) |
+| Add expenses/icomes | ![Desktop Edit Question Page image](django_todo/static/images/readme/add_page.png) | ![Mobile Edit Question Page image](assets/readme_files/mobile_edit_question.png) |
 | Sign Up |![Desktop Sign Up Page image](assets/readme_files/desktop_sign_up.png) | ![Mobile Sign Up Page image](assets/readme_files/mobile_sign_up.png) |
 | Sign In |![Desktop Sing In Page image](assets/readme_files/desktop_login.png) | ![](assets/readme_files/mobile_login.png) |
 | Sign Out |![Desktop Sign Out Page image](assets/readme_files/desktop_logout.png) | ![Mobile Sign Out Page image](assets/readme_files/mobile_logout.png) |
@@ -525,15 +522,6 @@ Page | Desktop | Mobile |
 * Website content was written by the developer.
 * Example questions and replies were taken from [Stack Overflow](https://stackoverflow.com/)-
 
-### Media
-
-* [Pexels](https://www.pexels.com/)
-
-    * About Page image: Taken by [Buro Millennial](https://www.pexels.com/@buro-millennial-636760/).
-
-* [Unsplash](https://unsplash.com/)
-
-    * 404 Error Page image: Taken by [Tai Bui](https://unsplash.com/@agforl24).
 
 ### Code
 
