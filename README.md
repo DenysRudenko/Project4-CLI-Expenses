@@ -37,13 +37,10 @@ Make sure you follow steps bellow to log in on the website:
     3. [Chart Page](#chart-page)
     4. [Search Results Page](#search-results-page)
     5. [Edit Expanse/Income Page](#edit-expenseincome-page)
-    6. [Ask Question Page](#ask-question-page)
-    7. [Leave Reply Page](#leave-reply-page)
-    8. [Edit Question Page](#edit-question-page)
-    9. [Delete Question Page](#delete-question-page)
-    10. [Edit Reply Page](#edit-reply-page)
-    11. [Delete Reply Page](#delete-reply-page)
-    12. [Authentication Pages](#authentication-pages)
+    6. [Add Expanse/Income Page](#add-expanseincome-page)
+    7. [Currency Page](#currency-page)
+    8. [Admin Page](#admin-page)
+    9. [Authentication Pages](#authentication-pages)
 3. [Technologies Used](#technologies-used)
     1. [Languages Used](#languages-used)
     2. [Libraries and Frameworks](#languages-and-frameworks)
@@ -336,7 +333,7 @@ Login | Allow the Site User to sign in with their account. | ![Code Buddy Sign I
 Logout | Allow the Site User to sign out from their account. | ![Code Buddy Sign Out Page](django_todo/static/images/readme/reset_pass.png) |
 
 
-[Back to top ⇧](#code-buddy)
+[Back to top ⇧](#cli-expenses)
 
 
 ## Technologies Used
@@ -353,9 +350,6 @@ Logout | Allow the Site User to sign out from their account. | ![Code Buddy Sign
 
 * [Django](https://www.djangoproject.com/)   
     * Django was used as web framework.
-
-* [Django Template](https://jinja.palletsprojects.com)  
-    * Django Template was used as a templating language for Django to display backend data to HTML.
    
 * [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)  
     * Bootstrap 5 was used throughout the website to help with styling and responsiveness.
@@ -372,17 +366,6 @@ Logout | Allow the Site User to sign out from their account. | ![Code Buddy Sign
 
 ### Packages / Dependecies Installed
 
-* [Django Allauth](https://django-allauth.readthedocs.io/en/latest/)  
-    * Django Allauth was used for user authentication, registration, and account management.
-
-* [Django Crispy Form](https://django-crispy-forms.readthedocs.io/en/latest/)   
-    * Django Crispy Form was used to control the rendering of the forms. 
- 
-* [Gunicorn](https://gunicorn.org/)  
-    * Gunicorn was used as Python WSGI HTTP Server for UNIX to support the deployment of Django application.  
-
-* [Summernote](https://summernote.org/) 
-    * Summernote has been used as WYSIWYG editor.
 
 * [Cloudinary](https://cloudinary.com/)
     * Cloudinary has been used as image management solution
@@ -406,17 +389,12 @@ Logout | Allow the Site User to sign out from their account. | ![Code Buddy Sign
 * [Heroku](https://www.heroku.com)   
     * Heroku was used to deploy the website.
 
-* [Am I Responsive](ami.responsivedesign.is)  
-    * Am I Responsive was used to preview the website across a variety of popular devices.
-
-* [Tiny PNG](https://tinypng.com)    
-    * Tiny PNG was used to reduce the file size of the images.
 
 * [Coolors](https://coolors.co)  
     * Coolors was used to create a color scheme for the website.
 
-* [Balsamiq](https://balsamiq.com/)
-     * Balsamiq was used to create the wireframes during the design phase of the project
+* [Wireframe](https://wireframe.cc/)
+     * Wireframe was used to create the wireframes during the design phase of the project
 
 * [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
     * Chrome DevTools was used during development process for code review and to test responsiveness.
@@ -433,14 +411,14 @@ Logout | Allow the Site User to sign out from their account. | ![Code Buddy Sign
 * [Favicon.cc](https://www.favicon.cc/) 
     * Favicon.cc was used to create the site favicon.
 
-[Back to top ⇧](#code-buddy)
+[Back to top ⇧](#cli-expenses)
 
 ## Testing
 
 The testing documentation can be found [here](https://github.com/josswe26/code-buddy/blob/main/TESTING.md#code-buddy-testing).
 
 
-[Back to top ⇧](#code-buddy)
+[Back to top ⇧](#cli-expenses)
 
 ## Deployment
 
@@ -485,7 +463,7 @@ To deploy this page to Heroku from its GitHub repository, the following steps we
 By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
 
 1. Log into [GitHub](https://github.com/login) or [create an account](https://github.com/join).
-2. Locate the [GitHub Repository](https://github.com/josswe26/code-buddy).
+2. Locate the [GitHub Repository](https://github.com/DenysRudenko/Project4-CLI-Expenses).
 3. At the top of the repository, on the right side of the page, select "Fork"
 4. You should now have a copy of the original repository in your GitHub account.
 
@@ -494,21 +472,21 @@ How to run this project locally:
 1. Install the [GitPod Browser](https://www.gitpod.io/docs/browser-extension/ "Link to Gitpod Browser extension download") Extension for Chrome.
 2. After installation, restart the browser.
 3. Log into [GitHub](https://github.com/login "Link to GitHub login page") or [create an account](https://github.com/join "Link to GitHub create account page").
-2. Locate the [GitHub Repository](https://github.com/josswe26/code-buddy).
+2. Locate the [GitHub Repository](https://github.com/DenysRudenko/Project4-CLI-Expenses).
 5. Click the green "GitPod" button in the top right corner of the repository.
 This will trigger a new gitPod workspace to be created from the code in github where you can work locally.
 
 How to run this project within a local IDE, such as VSCode:
 
 1. Log into [GitHub](https://github.com/login) or [create an account](https://github.com/join).
-2. Locate the [GitHub Repository](https://github.com/josswe26/code-buddy).
+2. Locate the [GitHub Repository](https://github.com/DenysRudenko/Project4-CLI-Expenses).
 3. Under the repository name, click "Clone or download".
 4. In the Clone with HTTPs section, copy the clone URL for the repository.
 5. In your local IDE open the terminal.
 6. Change the current working directory to the location where you want the cloned directory to be made.
 7. Type 'git clone', and then paste the URL you copied in Step 3.
 ```
-git clone https://github.com/josswe26/code-buddy
+git clone https://github.com/DenysRudenko/Project4-CLI-Expenses
 ```
 8. Press Enter. Your local clone will be created.
 
@@ -516,7 +494,7 @@ Further reading and troubleshooting on cloning a repository from GitHub [here](h
 
 
 
-[Back to top ⇧](#code-buddy)
+[Back to top ⇧](#cli-expenses)
 
 ## Finished Product
 
@@ -538,7 +516,7 @@ Page | Desktop | Mobile |
 | 404 Error |![Desktop 404 Error Page image](assets/readme_files/desktop_404.png) | ![Mobile 404 Error Page image](assets/readme_files/mobile_404.png) |
 
 
-[Back to top ⇧](#code-buddy)
+[Back to top ⇧](#cli-expenses)
 
 ## Credits
 
@@ -563,7 +541,7 @@ Page | Desktop | Mobile |
 
 * Message implementation an dismissal code is taken from [Code Institute](https://codeinstitute.net/)'s django-blog project.
 
-[Back to top ⇧](#code-buddy)
+[Back to top ⇧](#cli-expenses)
 
 ## Known Bugs
 
@@ -573,7 +551,7 @@ Page | Desktop | Mobile |
 
 * A known issue with Summernote field validation is present in the project. An invalid form will be posted if the field is empty. A message will however be displayed, informing the user that there has been a problem with the submission.
 
-[Back to top ⇧](#code-buddy)
+[Back to top ⇧](#cli-expenses)
 
 ## Acknowledgements
 
@@ -585,4 +563,4 @@ Page | Desktop | Mobile |
 
 * Code Institute and its amazing Slack community for their support and providing me with the necessary knowledge to complete this project.
 
-[Back to top ⇧](#code-buddy)
+[Back to top ⇧](#cli-expenses)
