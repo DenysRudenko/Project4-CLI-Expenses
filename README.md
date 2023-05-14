@@ -211,49 +211,71 @@ The Fonts being used in the site is sans-serif and monospace for whole text and 
 
 ### General
 
-* The website has been designed from a mobile first perspective.
+* The website has been designed from a dekstop first perpective.
 
 * Responsive design across all device sizes.
 
 * Navigation Bar
-![Code Buddy Navigation Bar image](assets/readme_files/code_buddy_navbar.png)
 
-    *  Contains the main logo and section links.
+![CLI Navigation Bar image](django_todo/static/images/readme/navbar.png)
 
-    * The navigation bar contains links to all sections to facilitate navigation across the site. It also has a hover effect that changes color to provide feedback to the Site User for a better user experience.
+    *  Contains the main name and section links.
 
-* Search bar
-![Code Buddy Search Bar image](assets/readme_files/code_buddy_search_bar.png)
+    * The navigation bar contains links to all sections to facilitate navigation across the site. It also has a hover effect that changes color to provide feedback to the Site User for a better user experience. Also icons for each section displayed. The navigation bar on the left side of the screen.
 
-    * Provide the Site User an input field and a Search button to be able to search for specific questions.
+* Search bar and Export buttons.
 
-* Footer
-  ![Code Buddy Footer image](assets/readme_files/code_buddy_footer.png)
+![CLI Search Bar image](django_todo/static/images/readme/search.png)
 
-    * The footer includes a logo and link to social media channels.
+    * Provide the Site User an input field and import your expenses/incomes in csv or exel.
+
+![CLI csv image](django_todo/static/images/readme/csv.png)
+
+     *  As we can mention in the image there is an example of incomes that I created on the website imported to exel.
+
+* Add expenses/incomes
+  
+  ![CLI button image](django_todo/static/images/readme/add.png)
+
+    * The button for adding expenses or incomes in the right corner.
 
 
 ### Home Page
 
-* Question list
-![Code Buddy Question List image](assets/readme_files/code_buddy_question_list.png)
+* Expanses/Incomes list
 
-    * Display a paginated list of all the question and its relevant information for the user to identify.
+![Code Buddy Question List image](django_todo/static/images/readme/list.png)
 
-    * Provide the Site User with a link to the detailed question.
+    * Display a list of expenses/incomes that have been created.
 
-    * Question score as well as voting possibilities for registered users is provided next to the question.
+    * User can edit the expense by pressing the button in right corner in front of expense.
 
-    * For registered users, a Ask Question button is provided to allow the user to access the Ask Question Page to create new questions.
+    * Expenses/Incomes are sorted by the date.
 
-    * Edit and Question buttons are provided for the questions the registered Site User has created.
+    * Expenses/Incomes have been created as table in html with headings such as : amount, category, date, description.
+
+    * Also there is additional button at the end that helps the user to go on the next page.
+
+![Code Buddy Question List image](django_todo/static/images/readme/next.png)
+
+    * At the buttom of the page there is a chart displayed to show the user details about his incomes/expenses with the amount for each category.
+
+![Code Buddy Question List image](django_todo/static/images/readme/diagram.png)
+
+    * In the right corner at the top, we have a button to log out with a username.
+
+![Code Buddy Question List image](django_todo/static/images/readme/logout.png)
 
 
-### About Page
-
-![Code Buddy About Page image](assets/readme_files/code_buddy_about.png)
+### Chart Page
 
 * Provide relevant information about the website's objective.
+
+![Code Buddy About Page image](django_todo/static/images/readme/chart1.png)
+
+* Extra button that will allow to come back to your expenses/incomes dashboard.
+
+![Code Buddy About Page image](django_todo/static/images/readme/back.png)
 
 
 ### Search Results Page
