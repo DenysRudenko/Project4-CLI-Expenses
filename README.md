@@ -531,11 +531,18 @@ Page | Desktop | Mobile |
 
 ## Known Bugs
 
-* Upvote/downvote button selection stay the same for all users. This do to an error in the logic. Even though the developer has an idea on how to solve the issue. The solution is yet to be implemented due lack of time.
+* I had a bug that expenses/incomes of the user can be deleted while the user logged off if you copy the link and paste it into search bar in your browser.
 
-* The same applies for pagination is Search Results page which is currently not working.
+![Code Buddy Ask Question Page](django_todo/static/images/readme/bug.png)
 
-* A known issue with Summernote field validation is present in the project. An invalid form will be posted if the field is empty. A message will however be displayed, informing the user that there has been a problem with the submission.
+* The solution of this problem was in 2 lines of code, for now if user input the link, user will redirected to login page.
+
+![Code Buddy Ask Question Page](django_todo/static/images/readme/bug_fix.png)
+
+* The bug in chart diagram, when the user was hovering the chart it displayed the fixed values of the expenses/incomes, but it should be the values that user created. The solution was to add the variable names that store in our database.
+
+![Code Buddy Ask Question Page](django_todo/static/images/readme/data.png)
+
 
 [Back to top ⇧](#cli-expenses)
 
