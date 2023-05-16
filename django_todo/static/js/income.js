@@ -1,3 +1,4 @@
+// jshint esversion: 6
 const renderChart = (data, labels) => {
 var ctx = document.getElementById('incomeChart').getContext("2d");
 
@@ -38,12 +39,12 @@ var incomeChart = new Chart(ctx, {
         }
     }
     });
-}
+};
 
 // This is a function that retrieves expense category data from the server
 // and renders it in a chart using the Chart.js library.
 const getIncomeChartData = () => {
-    console.log("Test?")
+    console.log("Test?");
     fetch('/income/income_source_summary')
         .then(res => res.json())
         .then(results => {

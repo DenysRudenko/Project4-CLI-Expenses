@@ -1,3 +1,4 @@
+// jshint esversion: 6
 const searchField = document.querySelector("#searchField");
 const tableOutput = document.querySelector(".table-output");
 const appTable = document.querySelector(".app-table");
