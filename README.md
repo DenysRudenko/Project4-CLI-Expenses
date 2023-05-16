@@ -533,26 +533,23 @@ Page | Desktop | Mobile |
 
 * I had a bug that expenses/incomes of the user can be deleted while the user logged off if you copy the link and paste it into search bar in your browser.
 
-![Code Buddy Ask Question Page](django_todo/static/images/readme/bug.png)
+![CLI expenses](django_todo/static/images/readme/bug.png)
 
 * The solution of this problem was in 2 lines of code, for now if user input the link, user will redirected to login page.
 
-![Code Buddy Ask Question Page](django_todo/static/images/readme/bug_fix.png)
+![CLI expenses](django_todo/static/images/readme/bug_fix.png)
 
 * The bug in chart diagram, when the user was hovering the chart it displayed the fixed values of the expenses/incomes, but it should be the values that user created. The solution was to add the variable names that store in our database.
 
-![Code Buddy Ask Question Page](django_todo/static/images/readme/data.png)
+![CLI expenses](django_todo/static/images/readme/data.png)
 
 
 [Back to top ⇧](#cli-expenses)
 
 ## Acknowledgements
+### Thanks:
 
-* My partner, for her unconditional love, help and continued support in all aspects of life, specially when I did not have time for anything else than to work with this project. You made it possible!
-
-* My friend, Miguel, for being always there to help, no matter what time of the day.
-
-* My tutor, Marcel, for his invaluable support, feedback and guidance through the whole process.
+* My tutor, Marcel, for his support and for the best tips and advice about the whole project.
 
 * Code Institute and its amazing Slack community for their support and providing me with the necessary knowledge to complete this project.
 
