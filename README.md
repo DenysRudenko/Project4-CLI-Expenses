@@ -16,7 +16,7 @@ Make sure you follow steps bellow to log in on the website:
     * You will receive a confirmation email, follow the steps in email provided.
     * After successfully you confirm, use your username and password to log in.
 
-![Code Buddy Edit Question Page](django_todo/static/images/readme/conf.png)
+![CLI Expenses](django_todo/static/images/readme/conf.png)
 
 
 ## Table of Contents
@@ -415,7 +415,7 @@ Logout | Allow the Site User to sign out from their account. | ![Code Buddy Sign
 
 ## Testing
 
-The testing documentation can be found [here](https://github.com/josswe26/code-buddy/blob/main/TESTING.md#code-buddy-testing).
+The testing documentation can be found [here](https://github.com/DenysRudenko/Project4-CLI-Expenses/blob/master/TESTING.md).
 
 
 [Back to top ⇧](#cli-expenses)
