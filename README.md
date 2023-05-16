@@ -507,9 +507,9 @@ Page | Desktop | Mobile |
 | Currency |![Desktop Ask Question Page image](django_todo/static/images/readme/curr_page.png) | ![Mobile Ask Question Page image](django_todo/static/images/readme/mob_currt.jpg) |
 | Edit expenses/incomes |![Desktop Leave Reply Page image](django_todo/static/images/readme/edit_page.png) | ![Mobile Leave Reply Page image](django_todo/static/images/readme/edit_mob.jpg) |
 | Add expenses/icomes | ![Desktop Edit Question Page image](django_todo/static/images/readme/add_page.png) | ![Mobile Edit Question Page image](django_todo/static/images/readme/add_mob.jpg) |
-| Sign Up |![Desktop Sign Up Page image](assets/readme_files/desktop_sign_up.png) | ![Mobile Sign Up Page image](assets/readme_files/mobile_sign_up.png) |
-| Sign In |![Desktop Sing In Page image](assets/readme_files/desktop_login.png) | ![](assets/readme_files/mobile_login.png) |
-| Sign Out |![Desktop Sign Out Page image](assets/readme_files/desktop_logout.png) | ![Mobile Sign Out Page image](assets/readme_files/mobile_logout.png) |
+| Sign Up |![Desktop Sign Up Page image](django_todo/static/images/readme/reg_desk.png) | ![Mobile Sign Up Page image](django_todo/static/images/readme/sig_mob.jpg) |
+| Sign In |![Desktop Sing In Page image](django_todo/static/images/readme/log_desk.png) | ![](django_todo/static/images/readme/log_mob.jpg) |
+| Reset |![Desktop Sign Out Page image](django_todo/static/images/readme/res_desk.png) | ![Mobile Sign Out Page image](django_todo/static/images/readme/res_mob.jpg) |
 
 [Back to top ⇧](#cli-expenses)
 
