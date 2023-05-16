@@ -51,21 +51,11 @@
     <div class="card mt-5">
       <div class="card-body">
         <div class="card-title py-3">
-          <h4>Login to your  account</h4>
+          <h4>Instruction</h4>
+          <h5>Make sure you follow steps bellow to log in on the website:</h5>
+          
         </div>
-        <form>
-          {% csrf_token %}
 
-          {% include 'partials/_messages.html' %}
-          <div class="form-group">
-            
-        </form>
-
-         <div class="container">
-          <span class="text-lead lead">Dont have an account? <a href="{% url 'register' %}">Register</a></span> 
-          <br>
-          <span class="text-lead lead">Forgot password? <a href="{% url 'request-password' %}">Reset</a></span> 
-        </div>
       </div>
       </div>
     </div>
