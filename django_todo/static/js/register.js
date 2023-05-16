@@ -1,3 +1,4 @@
+// jshint esversion: 6
 const usernameField = document.querySelector("#usernameField");
 const feedBackArea = document.querySelector(".invalid_feedback");
 const emailField = document.querySelector("#emailField");
