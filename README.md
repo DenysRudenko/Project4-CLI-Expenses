@@ -318,10 +318,22 @@ The Fonts being used in the site is sans-serif and monospace for whole text and 
 * Provide a form to allow choose the currency wallet for your incomes/expenses.
 
 
-### Admin Page
-![Code Buddy Edit Question Page](django_todo/static/images/readme/admin.png)
+### Messages
+![Code Buddy Edit Question Page](django_todo/static/images/readme/save.png)
 
-* Provide an admin access for the website where admin can do everything with users, expenses, incomes, groups.
+* Messages that represent that you created or edited the expense/income.
+
+![Code Buddy Edit Question Page](django_todo/static/images/readme/remove.png)
+
+* Messages that represent that you deteled the expense/income.
+
+![Code Buddy Edit Question Page](django_todo/static/images/readme/logout1.png)
+
+* Messages that represent that you logged off from the website.
+
+![Code Buddy Edit Question Page](django_todo/static/images/readme/login1.png)
+
+* Messages that represent that you logged in on the website.
 
 
 ### Authentication Pages

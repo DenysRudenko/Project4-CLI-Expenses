@@ -138,6 +138,15 @@ Whole css file was taken from [here](https://getbootstrap.com/docs/5.3/examples/
 
 ![CSS validation image](django_todo/static/images/readme/cssvisual.png)
 
+#### Solution:
+```
+form a.btn .btn-secondary .btn-sm:hover {
+  background-color: #009879;
+  color: #ffffff;
+  border-color: #09253a;
+}
+```
+
 
 ### Python
 
