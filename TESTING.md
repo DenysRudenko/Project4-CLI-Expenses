@@ -158,8 +158,24 @@ Pep8ci was used continuously during the development process to analyze the Pytho
 ### JavaScript
 
 [JSHints JavaScript Code Quality Tool](https://jshint.com/) was used to validate the site's JavaScript code. 
+At the start I had a lot of errors something like that:
 
-No errors were found.
+![views.py code reviewed image](django_todo/static/images/readme/js.png)
+
+To find the solution I search in google, the best option to reach the solution was to add one line of code at the start :
+```
+// jshint esversion: 6
+```
+
+| Location | Errors / Warnings | Code Reviewed |
+| --- | --- | --- |
+| ./js/expenses.js | One undefined variable 6 Chart |![expenses.js code reviewed image](django_todo/static/images/readme/js1.png) |
+| ./js/exstats.js | One undefined variable 6 Chart | ![exstats.js code reviewed image](django_todo/static/images/readme/js2.png) |
+| ./js/hexstats.js | One undefined variable 6 Chart | ![hexstats.js code reviewed image](django_todo/static/images/readme/js3.png) |
+| ./js/income.js | One undefined variable 6 Chart | ![income.js code reviewed image](django_todo/static/images/readme/js4.png) |
+| ./js/register.js | No errors / warnings | ![register.js code reviewed image](django_todo/static/images/readme/js5.png) |
+| ./js/searchExpenses.js | No errors / warnings | ![searchExpenses.js code reviewed image](django_todo/static/images/readme/js5.png) |
+| ./js/searchIncome.js | No errors / warnings | ![searchIncome.js code reviewed image](django_todo/static/images/readme/js6.png) |
 
 
 ## Accessibility
