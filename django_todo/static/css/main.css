@@ -185,13 +185,16 @@ a.page-link {
 a.nav-link .home {
   text-decoration: underline;
   text-transform: uppercase;
+  cursor: none;
 }
 
 span.home {
   text-decoration: underline;
   text-transform: uppercase;
+  cursor: none;
   
 }
 a.nav-link .home:hover {
   color: #9b9b9b;
+  cursor: none;
 }
