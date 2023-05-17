@@ -1,10 +1,10 @@
-# Code Buddy Testing
+# CLI Expenses Testing
 
-[Back to the README.md file](https://github.com/josswe26/code-buddy#codebuddy)  
+[Back to the README.md file](https://github.com/DenysRudenko/Project4-CLI-Expenses/blob/master/README.md)  
 
-[Back to the Testing section in the README.md file](https://github.com/josswe26/code-buddy#testing)
+[Back to the Testing section in the README.md file](https://github.com/DenysRudenko/Project4-CLI-Expenses/blob/master/README.md#testing)
 
-[View the live website here](https://django-code-buddy.herokuapp.com/)  
+[View the live website here](https://trulyexpenses.herokuapp.com/authentication/register)  
 
 ## Table of Contents
 
@@ -20,26 +20,24 @@
 
 ## Testing User Stories
 
-### 1. As a Site Admin I can create, read, update and delete questions and answers so that I can manage the site content
+### 1. As a Site Admin I can create, read, update and delete expenses and incomes so that I can manage the site content
 
-* An admin site has been provided so that the Site Admin can manage question and replies.
+* An admin site has been provided so that the Site Admin can manage expenses and incomes.
 
-* Question and replies can be created, read, updated and deleted from the site.
+* Expenses and incomes can be created, read, updated and deleted from the site.
 
-* Questions and replies main fields are being displayed for the Site Admin to identify them easily.
+* Expenses and incomes main fields are being displayed for the Site Admin to identify them easily.
 
-* Questions and replies can be filtered and searched to narrow down a specific group.
+* Expenses and incomes can be filtered and searched to narrow down a specific group.
 
 
-### 2. As a Site User I can register an account so that I can create and rate questions and replies
+### 2. As a Site User I can register an account so that I can create expenses/incomes
 
 * Account registration has been provided for Site User.
 
-* Registered Site Users are given the possibility to submit questions and replies.
+* Registered Site Users are given the possibility to submit expenses and incomes.
 
-* Registered Site Users are able to edit and delete their own questions.
-
-* Registered Site Users are able to vote upvote and downvote questions and replies.
+* Registered Site Users are able to edit and delete their expenses and incomes.
 
 
 ### 3. As a Site User I can create new questions so that I can receive help from other users
