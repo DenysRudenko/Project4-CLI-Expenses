@@ -551,6 +551,8 @@ Page | Desktop | Mobile |
 
 * My tutor, Marcel, for his support and for the best tips and advice about the whole project.
 
+* My teacher Serhii Odribets for amazing advice and solutions about the whole project, follow the Linkedin link [here](https://www.linkedin.com/in/serhii-odribets-43a5903b/).
+
 * Code Institute and its amazing Slack community for their support and providing me with the necessary knowledge to complete this project.
 
 [Back to top ⇧](#cli-expenses)
