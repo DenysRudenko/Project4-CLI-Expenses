@@ -85,32 +85,30 @@
 * Site Admin can edit accounts all over the website. 
 
 
-### 9. As a Site User I search for a specific expenses/incomes on my expenses/icnomes list.
+### 8. As a Site User I search for a specific expenses/incomes on my expenses/icnomes list.
 
 * Search bar provided that helps user to search for a expense/income.
 
 * Search bar works by category, amount or specific letter.
 
 
-### 10. As a Site User I can view a list of expenses/icnomes so that I can select one to manage my wallet.
+### 9. As a Site User I can view a list of expenses/icnomes so that I can select one to manage my wallet.
 
 * The Home page is a Expenses List, displaying all existing expenses to all Site Users.
 
 * Expenses are displayed in creation date/time order, showing the newest questions on top by 6 months. 
 
 
-### 11. As a Site User I can view a paginated list of expenses/incomes so that I can easily select a question to view
+### 10. As a Site User I can view a paginated list of expenses/incomes so that I can easily select a question to view
 
 * The Expenses/Incomes List displayed in the Home page is paginated every 5 exepenses/incomes.
 
 * Navigation buttons are provided on the bottom of each page to navigate easily between pages.
 
 
-
-### 15. As a Site User I can view the value on the bottom of the page for each expense/income via the chart diagram.
+### 11. As a Site User I can view the value on the bottom of the page for each expense/income via the chart diagram.
 
 * The expense/income rating is being displayed for all Site Users at the bottom page.
-
 
 
 ## Code Validation
@@ -119,44 +117,42 @@
 
 The [W3C Markup Validator](https://validator.w3.org/) service was used to validate the HTML code of the project in order to ensure there were no syntax errors.
  
-W3C Markup Validator found the following errors concerning index.html.
+W3C Markup Validator found the following information concerning index.html.
 
-![index.html validation errors image](assets/testing_files/index_validation_errors.jpg)
+![index.html validation errors image](django_todo/static/images/readme/htmlv.png)
 
-The errors were solved by removing the aria-label attribute from the nav, as well as removing the invalid closing Div tag.
-
-![index.html validation](assets/testing_files/index_validation.jpg)
-
-
-
-W3C Markup Validator also found a great amount of errors in pages with user input. However, I found those errors to be coming from the Summernote editor. See example below:
-
-![Summernote HTML errors image](assets/testing_files/summernote_errors.jpg)
+Looks like I forgot to minify the html. I haven't done anything with it due lack of time.
 
 
 ### CSS
 
 [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) service was used to validate the CSS code of the project in order to ensure there were no syntax errors. 
 
-W3C CSS Validator found no errors or warnings on my CSS.
+W3C CSS Validator found errors and warnings on my CSS.
 
-![CSS validation image](assets/testing_files/css_validation.png)
+![CSS validation image](django_todo/static/images/readme/cssv.png)
+
+![CSS validation image](django_todo/static/images/readme/cssv2.png)
+
+Whole css file was taken from [here](https://getbootstrap.com/docs/5.3/examples/dashboard/) using Bootstrap, in the future this is bad idea and better just take short parts than whole css that include 9772 lines of code. 
+
+![CSS validation image](django_todo/static/images/readme/cssvisual.png)
 
 
-### Pyhton
+### Python
 
-Pylint was used continuously during the development process to analyze the Python code for programming errors.
+Pep8ci was used continuously during the development process to analyze the Python code for programming errors.
 
-[PEP8 online](http://pep8online.com/) was further used to validate the Python code to validate the Python code for PEP8 requirements. See below the validation results and the reviewed results. 
+[PEP8 online](https://pep8ci.herokuapp.com/) was further used to validate the Python code to validate the Python code for PEP8 requirements. See below the validation results and the reviewed results. 
 
 
 | Location | Errors / Warnings | Code Reviewed |
 | --- | --- | --- |
-| ./question/admin.py | No errors / warnings |![admin.py code reviewed image](assets/testing_files/pep8_admin.png) |
-| ./question/forms.py | ![forms.py errors/warnings image](assets/testing_files/pep8_forms_errors.png) | ![forms.py code reviewed image](assets/testing_files/pep8_forms_reviewed.png) |
-| ./question/models.py | ![models.py errors/warnings image](assets/testing_files/pep8_models_errors.png) | ![models.py code reviewed image](assets/testing_files/pep8_models_reviewed.png) |
-| ./question/urls.py | ![urls.py errors/warnings image](assets/testing_files/pep8_urls_errors.png) | ![urls.py code reviewed image](assets/testing_files/pep8_urls_reviewed.png) |
-| ./question/views.py | ![views.py errors/warnings image](assets/testing_files/pep8_views_errors.png) | ![views.py code reviewed image](assets/testing_files/pep8_views_reviewed.png) |
+| ./authentication/views.py | No errors / warnings |![views.py code reviewed image](django_todo/static/images/readme/python1.png) |
+| ./expenses/views.py | No errors / warnings | ![views.py code reviewed image](django_todo/static/images/readme/python2.png) |
+| ./userincome/views.py | 227: W391 blank line at end of file | ![views.py code reviewed image](django_todo/static/images/readme/python3.png) |
+| ./userpreferences/views.py | 43: W391 blank line at end of file | ![views.py code reviewed image](django_todo/static/images/readme/python4.png) |
+
 
 
 ### JavaScript
