@@ -31,115 +31,86 @@
 * Expenses and incomes can be filtered and searched to narrow down a specific group.
 
 
-### 2. As a Site User I can register an account so that I can create expenses/incomes
+### 2. As a Site User I can register an account.
 
 * Account registration has been provided for Site User.
 
-* Registered Site Users are given the possibility to submit expenses and incomes.
+* Account confirmation has be provided for the user.
 
-* Registered Site Users are able to edit and delete their expenses and incomes.
+* Account confirmation email provided for the user.
+
+### 3. As a Site User I can reset password.
+
+* Account reset password provided for the user.
+
+* Account confirmation reset password provided for the user.
+
+* Account confirmation reset password email provided for the user.
+
+### 4. As a Site User I can monitor my expenses/incomes values at chart page.
+
+* A Chart page has been provided for registered Site Users.
+
+* A Chart diagram is available in the Chart page for the Site Users to be able to compare the values by category. 
+
+* Back button displayed at chart page that will help user to redirect to expenses/incomes list.
 
 
-### 3. As a Site User I can create new questions so that I can receive help from other users
+### 5. As a Site User I can edit and delete my own expenses/icnomes so that I can manage the expenses/incomes I created
 
-* An Ask Question page has been provided for registered Site Users.
+* Edit and Delete Expenses/Incomes pages are provided for registered Site Users.
 
-* A form is available in the Ask Question page for the Site Users to be able to register new questions. 
+* A form is available inside those pages for the Site Users to be able to edit or delete a specific expenses/incomes.
 
-* An Ask Question button is displayed to the registered Site Users at the top of the questions list to access the Ask Question page.
+* The Edit Expenses/Incomes form is prepopulated with the current data for the user to be able to edit the content.
 
-
-### 4. As a Site User I can edit and delete my own questions so that I can manage the questions I created
-
-* Edit and Delete Question pages are provided for registered Site Users.
-
-* A form is available inside those pages for the Site Users to be able to edit or delete a specific question.
-
-* The Edit Question form is prepopulated with the current data for the user to be able to edit the content.
-
-* A Delete Question form is provided for Site Users to confirm the deletion. 
+* A Delete Expenses/incomes button is provided for Site Users. 
 
 * Edit and Delete button are displayed on those questions the user has created to access the respective page.
 
 
-### 5. As a Site User I can reply to questions so that I can help other users to find a solution
+### 6. As a Site Admin I have a website email that can help user to register or reset password
 
-* A Leave Reply page has been provided for registered Site Users.
+* Website email has a logo.
 
-* A form is available in the Leave Reply page for the Site Users to be able to register new replies to the questions. 
+* Website email sending confirmation email for users to confirm registration.
 
-* A Leave Reply button is displayed to the registered Site Users under the Question content inside the Question Details page. This button is used to access the Leave Reply page.
-
-
-### 6. As a Site User I can edit and delete my own replies so that I can manage the replies I created
-
-* Edit and Delete Reply pages are provided for registered Site Users.
-
-* A form is available inside those pages for the Site Users to be able to edit or delete a specific reply.
-
-* The Edit Reply form is prepopulated with the current data for the user to be able to edit the content.
-
-* A Delete Reply form is provided for Site Users to confirm the deletion. 
-
-* Edit and Delete button are displayed on those replies the user has created to access the respective page.
+* Website email sending confirmation email for users to reset password.
 
 
-### 7. As a Site User I can upvote and downvote questions and answers so that I can give relevance to the content.
+### 7. As a Site Admin I can delete or edit user information on the website.
 
-* Upvote and downvote buttons are provided for registered Site Users next to each question and reply.
+* Site Admin can delete accounts all over the website.
 
-* Registered Site Users can upvote, downvote or remove their votes using those buttons from the Home and Question Detail pages.
-
-
-### 8. As a Site User I can view a list of questions so that I can select one to read
-
-* The Home page is a Question List, displaying all existing question to all Site Users.
-
-* Questions are displayed in creation date/time order, showing the newest questions on top. 
+* Site Admin can edit accounts all over the website. 
 
 
-### 9. As a Site User I can search for specific questions so that I can easily find the information I am looking for
+### 9. As a Site User I search for a specific expenses/incomes on my expenses/icnomes list.
 
-* A Question Search field has been provided to all Site Users in the top of all pages.
+* Search bar provided that helps user to search for a expense/income.
 
-* This search field allow all Site Users to search questions using keyword(s).
-
-* A Search Results page with a list of questions matching the searched keyword(s) is provided.
-
-* The list gets paginated if the Search Results exceed 10 questions.
+* Search bar works by category, amount or specific letter.
 
 
-### 10. As a Site User I can view a paginated list of questions so that I can easily select a question to view
+### 10. As a Site User I can view a list of expenses/icnomes so that I can select one to manage my wallet.
 
-* The Question List displayed in the Home page is paginated every 10 questions.
+* The Home page is a Expenses List, displaying all existing expenses to all Site Users.
+
+* Expenses are displayed in creation date/time order, showing the newest questions on top by 6 months. 
+
+
+### 11. As a Site User I can view a paginated list of expenses/incomes so that I can easily select a question to view
+
+* The Expenses/Incomes List displayed in the Home page is paginated every 5 exepenses/incomes.
 
 * Navigation buttons are provided on the bottom of each page to navigate easily between pages.
 
 
-### 11. As a Site User I can click on a question so that I can read the full question and the replies received
 
-* A Question Detail page is provided for all Site Users to review the full question content.
+### 15. As a Site User I can view the value on the bottom of the page for each expense/income via the chart diagram.
 
-* The question title in the Question List page is provided as a link so that Site Users can access the Question Detail page for each specific question.
+* The expense/income rating is being displayed for all Site Users at the bottom page.
 
-
-### 12. As a Site User I can view the replies a question received so that I can find a solution to the question
-
-* Question's replies are being listed inside the Question Detail page for each specific question under the question content.
-
- * Replies are being sorted by their rating so that Site Users can find the most relevant replies on top.
-
-
-### 13. As a Site User I can view the score on each question so that I can find the most helpful
-
-* The question's rating is being displayed for all Site Users next to each question.
-
-
-### 14. As a Site User I can view the score on each reply so that I can find the most helpful
-
-* The reply's rating is being displayed for all Site Users next to each reply.
-
-* Replies are ordered by this rating so Site Users can find the most relevant replies on top
 
 
 ## Code Validation
