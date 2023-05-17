@@ -195,18 +195,16 @@ Lighthouse in Chrome DevTools has been used to confirm that the colors and fonts
 
 Page | Lighthouse Report |
 | --- | --- |
-| Index | ![Index Lighthouse Report](assets/testing_files/lighthouse_index.jpg) |
-| About | ![About Lighthouse Report](assets/testing_files/lighthouse_about.jpg) |
-| Register | ![Register Lighthouse Report](assets/testing_files/lighthouse_signup.jpg) |
-| Login | ![Login Lighthouse Report](assets/testing_files/lighthouse_login.jpg) |
-| Logout | ![Logout Lighthouse Report](assets/testing_files/lighthouse_logout.jpg) |
-| Question Detail !| ![Question Detail Lighthouse Report](assets/testing_files/lighthouse_question_detail.jpg) |
-| Ask Question | ![Ask Question Lighthouse Report](assets/testing_files/lighthouse_ask_question.jpg) |
-| Leave Reply | ![Leave Reply Lighthouse Report](assets/testing_files/lighthouse_leave_reply.jpg) |
-| Edit Question | ![Edit Question Lighthouse Report](assets/testing_files/lighthouse_edit_question.jpg) |
-| Delete Question | ![Delete Question Lighthouse Report](assets/testing_files/lighthouse_delete_question.jpg) |
-| Edit Reply | ![Edit Reply Lighthouse Report](assets/testing_files/lighthouse_edit_reply.jpg) |
-| Delete Reply | ![Delete Reply Lighthouse Report](assets/testing_files/lighthouse_delete_reply.jpg) |
+| Expenses | ![Index Lighthouse Report](django_todo/static/images/readme/lighthouse.png) |
+| Incomes | ![About Lighthouse Report](django_todo/static/images/readme/lighthouse1.png) |
+| Exepenses Chart | ![Register Lighthouse Report](django_todo/static/images/readme/lighthouse2.png) |
+| Income Chart | ![Login Lighthouse Report](django_todo/static/images/readme/lighthouse3.png) |
+| Currency | ![Logout Lighthouse Report](django_todo/static/images/readme/lighthouse4.png) |
+| Login | ![Question Detail Lighthouse Report](django_todo/static/images/readme/lighthouse5.png) |
+| Register | ![Ask Question Lighthouse Report](django_todo/static/images/readme/lighthouse6.png) |
+| Reset | ![Leave Reply Lighthouse Report](django_todo/static/images/readme/lighthouse7.png) |
+| Edit | ![Edit Question Lighthouse Report](django_todo/static/images/readme/lighthouse8.png) |
+| Add | ![Delete Question Lighthouse Report](django_todo/static/images/readme/lighthouse9.png) |
 
 
 ## Tools Testing
