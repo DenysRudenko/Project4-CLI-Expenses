@@ -120,7 +120,7 @@ class RegistrationView(View):
                     ', Please the link below to activate your account \n' +
                     activate_url, 'noreply@cliexpenses.com', [email])
                 EmailThread(email).start()
-                messages.success(request, 'Account successfully created.')
+                messages.success(request, 'Email successfully sent. Please check your email.')
                 return render(request, 'authentication/register.html')
 
         return render(request, 'authentication/register.html')
