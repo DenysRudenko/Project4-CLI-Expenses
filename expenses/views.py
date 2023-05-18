@@ -110,7 +110,11 @@ def add_expense(request):
         description = request.POST['description']
         date = request.POST['expense_date']
         category = request.POST['category']
-
+        
+        if not isinstance(amount, (int, float)):
+            messages.error(request, 'Amount is not number')
+            return render(request, 'expenses/add_expense.html', context)
+            
         if not description:
             messages.error(request, 'description is required')
             return render(request, 'expenses/add_expense.html', context)
