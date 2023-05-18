@@ -292,116 +292,27 @@ iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <sp
 | Sign Out | Registered | Log off from the account | Styled | Clicking this redirects back to Login page. | <span style="color:green">Pass</span> |
 
 
-#### Ask Question Page
+#### Expenses/Incomes list
 
-<table>
-    <tr>
-        <th colspan=2>Feature</th>
-        <th>Users</th>
-        <th>Test</th>
-        <th>Outcome</th>
-        <th>Pass/Fail</th>
-    </tr>
-    <tr>
-        <td rowspan=8>Question Form</td>
-        <td rowspan=2>Title input</td>
-        <td rowspan=2>Registered</td>
-        <td>Functionality</td>
-        <td>Text can be entered in the field.<br>Validation occurs if field is left empty</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Focus effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td rowspan=2>Content input</td>
-        <td rowspan=2>Registered</td>
-        <td>Functionality</td>
-        <td>Summernote editor display correctly.<br>Text can be entered in the field.<br>Unable to validate when field is left empty. Unable to submit if this happens as form is invalid.</td>
-        <td><span style="color:red">Fail</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Styled correctly by Summernote CSS code.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td rowspan=2>Submit button</td>
-        <td rowspan=2>Registered</td>
-        <td>Functionality</td>
-        <td>Clicking the button submit the form and redirects to the Home page.<br>Submit question if valid.<br>Display message if the form submits successfully or not.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Hover effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td rowspan=2>Cancel button</td>
-        <td rowspan=2>Registered</td>
-        <td>Functionality</td>
-        <td>Clicking the button redirects to the Home page.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Hover effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-</table>
+| Feuture | Users | Functionality | Style | Outcome | Pass/Fail |
+| -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
+| Amount | Registered | The value for each expense/income | Styled | Responsible for ammount that user input for each expense/income | <span style="color:green">Pass</span> |
+| Category | Registered | The category for each expense/income | Styled | Responsible for category that user choose for each expense/income | <span style="color:green">Pass</span> |
+| Description | Registered | Description for each expense/income | Styled | Responsible for description that user input for each expense/income | <span style="color:green">Pass</span> |
+| Date | Registered | Date for each expense/income | Styled | Responsible for date that user choose for each expense/income | <span style="color:green">Pass</span> |
+| Edit button | Registered | Link to edit page | Styled | Redirects to edit page that allows to edit expense/income | <span style="color:green">Pass</span> |
 
 
-#### Leave Reply Page
+#### Edit Expenses/Incomes 
 
-<table>
-    <tr>
-        <th colspan=2>Feature</th>
-        <th>Users</th>
-        <th>Test</th>
-        <th>Outcome</th>
-        <th>Pass/Fail</th>
-    </tr>
-    <tr>
-        <td rowspan=6>Reply Form</td>
-        <td rowspan=2>Body input</td>
-        <td rowspan=2>Registered</td>
-        <td>Functionality</td>
-        <td>Summernote editor display correctly.<br>Text can be entered in the field.<br>Unable to validate when field is left empty. Unable to submit if this happens as form is invalid.</td>
-        <td><span style="color:red">Fail</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Styled correctly by Summernote CSS code.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td rowspan=2>Submit button</td>
-        <td rowspan=2>Registered</td>
-        <td>Functionality</td>
-        <td>Clicking the button submit the form and redirects to the originating page.<br>Submit question if valid.<br>Display message if the form submits successfully or not</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Hover effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td rowspan=2>Cancel button</td>
-        <td rowspan=2>Registered</td>
-        <td>Functionality</td>
-        <td>Clicking the button redirects to the Home page.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Hover effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-</table>
+| Feuture | Users | Functionality | Style | Outcome | Pass/Fail |
+| -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
+| Amount | Registered | The value for each expense/income | Styled | Responsible for ammount that user input for each expense/income | <span style="color:green">Pass</span> |
+| Category | Registered | The category for each expense/income | Styled | Responsible for category that user choose for each expense/income | <span style="color:green">Pass</span> |
+| Description | Registered | Description for each expense/income | Styled | Responsible for description that user input for each expense/income | <span style="color:green">Pass</span> |
+| Date | Registered | Date for each expense/income | Styled | Responsible for date that user choose for each expense/income | <span style="color:green">Pass</span> |
+| Save button | Registered | Link to expense/income page | Styled | Save to database the income/expense that user edit | <span style="color:green">Pass</span> |
+| Delete button | Registered | Link to expense/income page | Styled | Delete a table for income/expense that user edit | <span style="color:green">Pass</span> |
 
 
 #### Edit Question Page
