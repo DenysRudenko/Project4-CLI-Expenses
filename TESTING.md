@@ -283,13 +283,13 @@ iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <sp
 
 | Feuture | Users | Functionality | Style | Outcome | Pass/Fail |
 | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
-| Log out | Registered | Contain menu and redicrection links | Styled | Clicking the menu buttons redirects to the specific page. | <span style="color:green">Pass</span> |
-| Expenses/Incomes | Registered | List of Expenses/Incomes | Styled | Showing each expense/income value and description. | <span style="color:green">Pass</span> |
-| Search bar | Registered | Allows to search for Expense/Income | Styled | Search for a specific expense/income. | <span style="color:green">Pass</span> |
-| Add Expense/Income button | Registered | Create New Expense/Income | Styled | Allows to create new expense/income. | <span style="color:green">Pass</span> |
-| Import CSV/XLS button | Registered | Download list of Expenses/Incomes | Styled | Allows to download a list of expense/income to your PC. | <span style="color:green">Pass</span> |
-| Expense/Income Chart | Registered | Displaying the values of each categoy Expenses/Incomes| Styled | Allows to monitor the values in your Expense/Income list. | <span style="color:green">Pass</span> |
-| Next Page button | Registered | Redirect to the next page of the list | Styled | Allows to move on to the next page of your Expense/Income list. | <span style="color:green">Pass</span> |
+| CLI Expenses | Registered | Main logo name redirects to home | Styled | Clicking 'CLI Expenses' redirects to the home page. | <span style="color:green">Pass</span> |
+| Expenses | Registered | Link to Expenses | Styled | Clicking this redirects to Expenses page/Home page. | <span style="color:green">Pass</span> |
+| Income | Registered | Link to Incomes | Styled | Clicking this redirects to Expenses page/Home page. | <span style="color:green">Pass</span> |
+| Exepenses Summary | Registered | Link to Expenses Chart | Styled | Clicking this redirects to Expenses Summary page | <span style="color:green">Pass</span> |
+| Income Summary | Registered | Link to Incomes Chart | Styled | Clicking this redirects to Incomes Summary page | <span style="color:green">Pass</span> |
+| Currency | Registered | Link to Currency | Styled | Clicking this redirects to Currency page. | <span style="color:green">Pass</span> |
+| Sign Out | Registered | Log off from the account | Styled | Clicking this redirects back to Login page. | <span style="color:green">Pass</span> |
 
 
 #### Ask Question Page
