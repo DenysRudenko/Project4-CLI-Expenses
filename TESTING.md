@@ -315,105 +315,17 @@ iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <sp
 | Delete button | Registered | Link to expense/income page | Styled | Delete a table for income/expense that user edit | <span style="color:green">Pass</span> |
 
 
-#### Edit Question Page
+#### Create Expenses/Incomes 
 
-<table>
-    <tr>
-        <th colspan=2>Feature</th>
-        <th>Users</th>
-        <th>Test</th>
-        <th>Outcome</th>
-        <th>Pass/Fail</th>
-    </tr>
-    <tr>
-        <td rowspan=6>Question Form</td>
-        <td rowspan=2>Title input</td>
-        <td rowspan=2>All</td>
-        <td>Functionality</td>
-        <td><br>Text in the field is being prepopulated correctly.<br>Text can be edited.<br>Validation occurs if field is left empty</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Focus effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td rowspan=2>Content input</td>
-        <td rowspan=2>Registered</td>
-        <td>Functionality</td>
-        <td>Summernote editor display correctly.<br>Text in the field is being prepopulated correctly.<br>Text can be edited.<br>Unable to validate when field is left empty. Unable to submit if this happens as form is invalid.</td>
-        <td><span style="color:red">Fail</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Styled correctly by Summernote CSS code.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td rowspan=2>Submit button</td>
-        <td rowspan=2>Registered</td>
-        <td>Functionality</td>
-        <td>Clicking the button submit the form and redirects to the Home page.<br>Edit question if form is valid.<br>Display message if the question is edit successfully or not.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Hover effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-</table>
+| Feuture | Users | Functionality | Style | Outcome | Pass/Fail |
+| -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
+| Amount | Registered | The value for each expense/income | Styled | Responsible for ammount that user input for each expense/income | <span style="color:green">Pass</span> |
+| Category | Registered | The category for each expense/income | Styled | Responsible for category that user choose for each expense/income | <span style="color:green">Pass</span> |
+| Description | Registered | Description for each expense/income | Styled | Responsible for description that user input for each expense/income | <span style="color:green">Pass</span> |
+| Date | Registered | Date for each expense/income | Styled | Responsible for date that user choose for each expense/income | <span style="color:green">Pass</span> |
+| Submit button | Registered | Link to expense/income page | Styled | Save to database the income/expense that user create | <span style="color:green">Pass</span> |
 
 
-#### Delete Question Page
-
-<table>
-    <tr>
-        <th colspan=2>Feature</th>
-        <th>Users</th>
-        <th>Test</th>
-        <th>Outcome</th>
-        <th>Pass/Fail</th>
-    </tr>
-    <tr>
-    <tr>
-        <td rowspan=6>Delete Form</td>
-        <td rowspan=2>Question Title</td>
-        <td rowspan=2>Registered</td>
-        <td>Functionality</td>
-        <td>Question title renders correctly.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>N/A</td>
-        <td>N/A</td>
-    </tr>
-    <tr>
-        <td rowspan=2>Yes button</td>
-        <td rowspan=2>Registered</td>
-        <td>Functionality</td>
-        <td>Clicking the button submit the form and redirects to the Home page.<br>Question get deleted.<br>Display message if the question is deleted successfully or not.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Hover effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td rowspan=2>No button</td>
-        <td rowspan=2>Registered</td>
-        <td>Functionality</td>
-        <td>Clicking the button redirects to the Home page without deleting the question.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Hover effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-</table>
 
 
 #### Edit Reply Page
