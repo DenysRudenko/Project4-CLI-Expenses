@@ -103,20 +103,20 @@ def add_expense(request):
 
     if request.method == 'POST':
         amount = request.POST['amount']
-
-        if not amount:
-            messages.error(request, 'Amount is required')
-            return render(request, 'expenses/add_expense.html', context)
         description = request.POST['description']
         date = request.POST['expense_date']
         category = request.POST['category']
         
-        if not isinstance(amount, (int, float)):
-            messages.error(request, 'Amount is not number')
+        if not amount:
+            messages.error(request, 'Amount is required')
             return render(request, 'expenses/add_expense.html', context)
-            
+        
+        if not amount.isnumeric():
+            messages.error(request, 'Amount is not a number')
+            return render(request, 'expenses/add_expense.html', context)
+           
         if not description:
-            messages.error(request, 'description is required')
+            messages.error(request, 'Description is required')
             return render(request, 'expenses/add_expense.html', context)
 
         Expense.objects.create(owner=request.user, amount=amount, date=date,
