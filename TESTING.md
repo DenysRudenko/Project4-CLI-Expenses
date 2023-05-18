@@ -261,7 +261,7 @@ iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <sp
     <tr>
         <td rowspan=14>Navigation Bar</td>
         <td rowspan=2>Main logo link</td>
-        <td rowspan=2>All</td>
+        <td rowspan=2>Registered</td>
         <td>Functionality</td>
         <td>Clicking the link redirects to the Home page.</td>
         <td><span style="color:green">Pass</span></td>
@@ -272,10 +272,10 @@ iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <sp
         <td>N/A</td>
     </tr>
     <tr>
-        <td rowspan=2>Home link</td>
-        <td rowspan=2>All</td>
+        <td rowspan=2>Expense link</td>
+        <td rowspan=2>Registered</td>
         <td>Functionality</td>
-        <td>Clicking the link redirects to the Home page.</td>
+        <td>Clicking the link redirects to the Expenses page.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -284,39 +284,63 @@ iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <sp
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
-        <td rowspan=2>About link</td>
-        <td rowspan=2>All</td>
+        <td rowspan=2>Income link</td>
+        <td rowspan=2>Registered</td>
         <td>Functionality</td>
-        <td>Clicking the link redirects to the About page.</td>
+        <td>Clicking the link redirects to the Income page.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
         <td>Style</td>
         <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Expense/Income Chart link</td>
+        <td rowspan=2>Registered</td>
+        <td>Functionality</td>
+        <td>Clicking the link redirects to the Expenses/Incomes chart page.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Hover effect working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Login page</td>
+        <td rowspan=2>Unregistered</td>
+        <td>Functionality</td>
+        <td>Allows to login on the website.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Functionality working as expected.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td rowspan=2>Reset Password link</td>
+        <td rowspan=2>Unregistered</td>
+        <td>Functionality</td>
+        <td>Allows to reset password on the website.</td>
+        <td><span style="color:green">Pass</span></td>
+    </tr>
+    <tr>
+        <td>Style</td>
+        <td>Functionality working as expected.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
         <td rowspan=2>Register link</td>
         <td rowspan=2>Unregistered</td>
         <td>Functionality</td>
-        <td>Clicking the link redirects to the Register page.</td>
+        <td>Allows to register on the website.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
         <td>Style</td>
-        <td>Hover effect working as expected.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td rowspan=2>Login link</td>
-        <td rowspan=2>Unregistered</td>
-        <td>Functionality</td>
-        <td>Clicking the link redirects to the Login page.</td>
-        <td><span style="color:green">Pass</span></td>
-    </tr>
-    <tr>
-        <td>Style</td>
-        <td>Hover effect working as expected.</td>
+        <td>Functionality working as expected.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
@@ -328,7 +352,7 @@ iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <sp
     </tr>
     <tr>
         <td>Style</td>
-        <td>Hover effect working as expected.</td>
+        <td>Pointer effect working as expected.</td>
         <td><span style="color:green">Pass</span></td>
     </tr>
     <tr>
