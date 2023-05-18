@@ -70,21 +70,33 @@ def add_income(request):
 
     if request.method == 'POST':
         amount = request.POST['amount']
-
-        if not amount:
-            messages.error(request, 'Amount is required')
-            return render(request, 'income/add_income.html', context)
         description = request.POST['description']
         date = request.POST['income_date']
         source = request.POST['source']
 
+        if not amount:
+            messages.error(request, 'Amount is required')
+            return render(request, 'income/add_income.html', context)
+        
+        if not amount.isnumeric():
+            messages.error(request, 'Amount is not a number')
+            return render(request, 'income/add_income.html', context)
+        
         if not description:
             messages.error(request, 'description is required')
             return render(request, 'income/add_income.html', context)
 
-        UserIncome.objects.create(owner=request.user, amount=amount, date=date,
-                                  source=source, description=description)
-        messages.success(request, 'Record saved successfully')
+        try:
+            UserIncome.objects.create(owner=request.user,
+                                      amount=amount,
+                                      date=date,
+                                      source=source,
+                                      description=description)
+        except Exception as e:
+            messages.error(request, 'Error occured:' + str(e))
+            return render(request, 'income/add_income.html', context)
+        else:
+            messages.success(request, 'Record saved successfully')
 
         return redirect('income')
 
