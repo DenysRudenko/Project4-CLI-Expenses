@@ -119,10 +119,18 @@ def add_expense(request):
             messages.error(request, 'Description is required')
             return render(request, 'expenses/add_expense.html', context)
 
-        Expense.objects.create(owner=request.user, amount=amount, date=date,
-                               category=category, description=description)
-        messages.success(request, 'Expense saved successfully')
-
+        try:
+            Expense.objects.create(owner=request.user, 
+                                   amount=amount,
+                                   date=date,
+                                   category=category,
+                                   description=description)
+        except Exception as e:
+            messages.error(request, 'Error occured:' + str(e))
+            return render(request, 'expenses/add_expense.html', context)
+        else:
+            messages.success(request, 'Expense saved successfully')
+            
         return redirect('expenses')
 
 
