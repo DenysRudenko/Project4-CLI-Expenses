@@ -283,8 +283,8 @@ iPhone 7 | iOS 15 |No appearance, responsiveness nor functionality issues. | <sp
 
 | Feuture | Users | Functionality | Style | Outcome | Pass/Fail |
 | -------------- | -------------- | -------------- | -------------- | -------------- | -------------- |
-| Navigation bar | Registered | Contain menu and redicrection links | Styled | Clicking the menu buttons redirects to the specific page. | <span style="color:green">Pass</span> |
-| Expenses/Incomes List | Registered | List of Expenses/Incomes | Styled | Showing each expense/income value and description. | <span style="color:green">Pass</span> |
+| Log out | Registered | Contain menu and redicrection links | Styled | Clicking the menu buttons redirects to the specific page. | <span style="color:green">Pass</span> |
+| Expenses/Incomes | Registered | List of Expenses/Incomes | Styled | Showing each expense/income value and description. | <span style="color:green">Pass</span> |
 | Search bar | Registered | Allows to search for Expense/Income | Styled | Search for a specific expense/income. | <span style="color:green">Pass</span> |
 | Add Expense/Income button | Registered | Create New Expense/Income | Styled | Allows to create new expense/income. | <span style="color:green">Pass</span> |
 | Import CSV/XLS button | Registered | Download list of Expenses/Incomes | Styled | Allows to download a list of expense/income to your PC. | <span style="color:green">Pass</span> |
