@@ -33,7 +33,7 @@ SECRET_KEY = \
     'REDACTED'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -97,7 +97,11 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # }
 
 DATABASES = {
-    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+    'default': dj_database_url.parse(
+        'postgres://urvcrtrpxnilua:'
+        'REDACTED'
+        '@ec2-54-73-22-169.eu-west-1.compute.amazonaws.com:'
+        '5432/d2lsmbtru1g9qk')
 }
 
 # Password validation
