@@ -42,7 +42,7 @@ X_FRAME_OPTIONS = 'SAMEORIGIN'
 ALLOWED_HOSTS = ['trulyexpenses.herokuapp.com', 'localhost']
 
 
-# ALLOWED_HOSTS = ['*']
+# dALLOWED_HOSTS = ['*']
 
 
 # Application definition
