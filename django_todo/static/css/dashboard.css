@@ -110,7 +110,7 @@ body {
   display: none;
 }
 
-@media (max-width: 799px){
+@media (max-width: 767px){
 
   .hide {
     display: inline-block;
