@@ -113,13 +113,14 @@ body {
 @media (max-width: 767px){
 
   .hide {
-    display: inline-block;
+    display: flex;
   }
 
   #navbar {
     background-color: #09253a;
     height: 200px;
     width: 100%;
+    justify-content: space-between;
   }
 
 }
