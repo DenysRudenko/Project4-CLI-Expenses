@@ -109,3 +109,17 @@ body {
 .hide {
   display: none;
 }
+
+@media (max-width: 799px){
+
+  .hide {
+    display: inline-block;
+  }
+
+  #navbar {
+    background-color: #09253a;
+    height: 200px;
+    width: 100%;
+  }
+
+}
