@@ -236,7 +236,7 @@ class RequestPasswordResetEmail(View):
                 email_subject,
                 'Hi, Please follow the link below to reset your password \n' +
                 reset_url,
-                'noreply@semycolon.com',
+                'cliexpensesrequest@gmail.com',
                 [email],
             )
             EmailThread(email).start()
