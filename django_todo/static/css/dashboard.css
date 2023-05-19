@@ -114,6 +114,7 @@ body {
 
   .hide {
     display: flex;
+    justify-content: space-between;
   }
 
   #navbar {
@@ -121,6 +122,10 @@ body {
     height: 200px;
     width: 100%;
     justify-content: space-between;
+  }
+
+  #navbar li {
+    list-style-type: none;
   }
 
 }
