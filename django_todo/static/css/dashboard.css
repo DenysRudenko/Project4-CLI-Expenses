@@ -132,8 +132,8 @@ body {
     list-style-type: none;
   }
   
-  #navbar li ul {
-
+  #main {
+    padding-top: 0px;
   }
 
 }
