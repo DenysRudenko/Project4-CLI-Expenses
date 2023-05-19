@@ -63,12 +63,21 @@
 
  <div class="hide">
             <ul id="navbar">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="src/html/shop.html">Shop</a></li>
-                <li><a href="src/html/blog.html">Blog</a></li>
-                <li><a href="src/html/about.html">About</a></li>
-                <li><a href="src/html/contact.html">Contact</a></li>
-                <li id="lg-bag"><a href="src/html/cart.html"><i class="fa-solid fa-bag-shopping active"></i><span> (0)</span></a></li>
-                <a href="#" id="close"><i class="fa-solid fa-square-xmark"></i></a>
+                <li> <a class="nav-link" href="{% url 'expenses' %}">
+                <i class="fa-solid fa-share-from-square"></i><span>Expenses</span> 
+                </a></li>
+                <li><a class="nav-link" href="{% url 'income' %}">
+                <i class="fa-solid fa-person-digging"></i><span>Income</span> 
+                </a></li>
+                <li><a class="nav-link" href="{% url 'exstats' %}">
+                <i class="fa-solid fa-chart-line"></i><span>Expenses Summary</span> 
+                </a></li>
+                <li><a class="nav-link" href="{% url 'hexstats' %}">
+                  <span data-feather="file-text"></span>
+                  <i class="fa-solid fa-chart-gantt"></i><span>Income Summary</span> 
+                </a></li>
+                <li><a class="nav-link" href="{% url 'preferences' %}">
+                <i class="fa-solid fa-euro-sign fa-lg"></i><span>  Currency</span> 
+              </a></li>    
             </ul>
         </div>
