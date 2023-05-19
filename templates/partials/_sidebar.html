@@ -1,7 +1,7 @@
 {% load static %}
 <nav class="col-md-2 d-none d-md-block bg-light sidebar">
   <div class="sidebar-sticky">
-    <ul class="nav flex-column">
+    <ul id="navbar" class="nav flex-column">
       <li class="nav-item">
         <a class="nav-link " href="#">
           <span data-feather="home"></span>
@@ -32,7 +32,7 @@
         <span data-feather="plus-circle"></span>
       </a>
     </h6>
-    <ul class="nav flex-column mb-2">
+    <ul id="navbar" class="nav flex-column mb-2">
       <li class="nav-item">
         <a class="nav-link" href="{% url 'exstats' %}">
         <i class="fa-solid fa-chart-line"></i><span>Expenses Summary</span> 
@@ -45,7 +45,7 @@
         </a>
       </li>
     </ul>
-    <ul class="nav flex-column">
+    <ul id="navbar" class="nav flex-column">
       <li class="nav-item">
         <a class="nav-link " href="#">
           <span data-feather="home"></span>
