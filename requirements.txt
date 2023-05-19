@@ -11,7 +11,8 @@ cssselect2==0.7.0
 dill==0.3.6
 distlib==0.3.6
 dj-database-url==0.5.0
-Django==4.1.7
+dj3-cloudinary-storage==0.0.6
+Django==3.2.19
 django-auth-utils==0.1.1
 django-cloudinary-storage==0.3.0
 django-crispy-forms==2.0
@@ -38,6 +39,7 @@ pydyf==0.5.0
 pylint==2.17.0
 pyphen==0.14.0
 python-dotenv==1.0.0
+pytz==2023.3
 requests==2.28.2
 six==1.16.0
 sqlparse==0.4.3
