@@ -40,9 +40,6 @@ UPGRADE_FILE_LIST = [{"filename": ".vscode/settings.json",
                      {"filename": ".vscode/init_tasks.sh",
                       "url": ".vscode/init_tasks.sh"
                       },
-                     {"filename": ".vscode/uptime.sh",
-                      "url": ".vscode/uptime.sh"
-                      },
                      {"filename": ".vscode/make_url.py",
                       "url": ".vscode/make_url.py"
                      },

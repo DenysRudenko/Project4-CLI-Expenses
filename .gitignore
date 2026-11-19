@@ -9,3 +9,10 @@ node_modules/
 cloudinary_python.txt
 *.sqlite3
 .env
+
+# Credential protection
+.env.*
+!.env.example
+credentials.json
+*.pem
+*.key
